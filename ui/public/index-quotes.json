@@ -1,0 +1,47 @@
+{
+  "updatedAt": "2026-02-12T06:26:28.874817Z",
+  "quotes": [
+    {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "price": 6941.47,
+      "previousClose": 6941.81,
+      "changePct": -0.0
+    },
+    {
+      "symbol": "^IXIC",
+      "label": "NASDAQ",
+      "price": 23066.47,
+      "previousClose": 23102.47,
+      "changePct": -0.16
+    },
+    {
+      "symbol": "^VIX",
+      "label": "VIX",
+      "price": 17.65,
+      "previousClose": 17.79,
+      "changePct": -0.79
+    },
+    {
+      "symbol": "QQQ",
+      "label": "QQQ",
+      "price": 613.11,
+      "previousClose": 611.47,
+      "changePct": 0.27
+    },
+    {
+      "symbol": "^DJI",
+      "label": "Dow Jones",
+      "price": 50121.4,
+      "previousClose": 50188.14,
+      "changePct": -0.13
+    },
+    {
+      "symbol": "^RUT",
+      "label": "Russell 2000",
+      "price": 2669.47,
+      "previousClose": 2679.77,
+      "changePct": -0.38
+    }
+  ]
+}

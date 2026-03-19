@@ -1,0 +1,374 @@
+services:
+  # =============================================================================
+  # CORE SERVICES
+  # =============================================================================
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: quant-platform-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-quant-platform}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-quant-platform_dev_password}
+      POSTGRES_DB: ${POSTGRES_DB:-quant-platform_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5432:5432"
+    networks:
+      - quant-platform-backend
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U quant-platform -d quant-platform_db" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # .NET 8 Gateway Service
+  gateway:
+    build:
+      context: ../services/gateway
+      dockerfile: Dockerfile
+    container_name: quant-platform-gateway
+    ports:
+      # Do not expose the gateway publicly; access it via nginx only.
+      - "127.0.0.1:8000:8000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8000
+      - AI_SERVICE_URL=http://nginx:5001
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=${POSTGRES_DB:-quant-platform_db};Username=${POSTGRES_USER:-quant-platform};Password=${POSTGRES_PASSWORD:-quant-platform_dev_password}
+      # S3-compatible storage (Hetzner Object Storage, etc.)
+      - S3_SERVICE_URL=${S3_SERVICE_URL:-}
+      - S3_BUCKET_NAME=${S3_BUCKET_NAME:-quant-platform-reports}
+      - S3_ACCESS_KEY=${S3_ACCESS_KEY:-}
+      - S3_SECRET_KEY=${S3_SECRET_KEY:-}
+      # Auth & Billing
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET:-}
+      - SENTRY_DSN=${SENTRY_DSN:-}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY:-}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET:-}
+      - BILLING_ALLOWED_RETURN_HOSTS=${BILLING_ALLOWED_RETURN_HOSTS:-}
+      # Data providers & internal jobs
+      - MASSIVE_API_KEY=${MASSIVE_API_KEY:-}
+      - INTERNAL_API_SECRET=${INTERNAL_API_SECRET:-}
+      # OTEL Configuration
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+      - OTEL_SERVICE_NAME=quant-platform-gateway
+      - OTEL_RESOURCE_ATTRIBUTES=service.namespace=quant-platform,deployment.environment=production
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ai-engine:
+        condition: service_started
+      otel-collector:
+        condition: service_started
+    networks:
+      - quant-platform-frontend
+      - quant-platform-backend
+      - quant-platform-observability
+    read_only: true
+    tmpfs:
+      - /tmp:size=10M,mode=1777,uid=1000,gid=1000
+      - /app/tmp:size=10M,mode=1700,uid=1000,gid=1000
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+
+  # Python AI Engine
+  # Scale with: docker compose up --scale ai-engine=3 -d
+  ai-engine:
+    build:
+      context: ../services/ai-engine
+      dockerfile: Dockerfile
+    user: root
+    environment:
+      # Container filesystem is read-only; force libraries that want ~/.cache to use the writable volume.
+      - HOME=/app/cache
+      - XDG_CACHE_HOME=/app/cache
+      - YFINANCE_CACHE_DIR=/app/cache
+      - TRANSFORMERS_CACHE=/app/cache
+      - HF_HOME=/app/cache
+      # LlamaIndex RAG (Deep Research)
+      - RAG_STORE_URI=${RAG_STORE_URI:-local://}
+      - RAG_PERSIST_DIR=/app/cache/rag
+      - RAG_EMBED_MODEL=${RAG_EMBED_MODEL:-BAAI/bge-small-en-v1.5}
+      - RAG_K_WATCHLIST_DEEP=${RAG_K_WATCHLIST_DEEP:-6}
+      - RAG_TOP_K_DEEP=${RAG_TOP_K_DEEP:-12}
+      # OTEL Configuration
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+      - OTEL_SERVICE_NAME=quant-platform-ai-engine
+      - OTEL_RESOURCE_ATTRIBUTES=service.namespace=quant-platform,deployment.environment=production
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - ENABLE_LLM=true
+    volumes:
+      - ai_cache:/app/cache
+    networks:
+      - quant-platform-backend
+      - quant-platform-observability
+    depends_on:
+      - otel-collector
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import requests; requests.get('http://localhost:5000/health')" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    read_only: true
+    tmpfs:
+      - /tmp:size=50M,mode=1777,uid=1000,gid=1000
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+
+  # Next.js UI
+  ui:
+    build:
+      context: ../ui
+      dockerfile: Dockerfile
+      args:
+        # Default to local gateway for dev; override via .env if you need to point at another deployment.
+        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:8000/api}
+        - NEXT_PUBLIC_POSTHOG_KEY=${NEXT_PUBLIC_POSTHOG_KEY:-}
+        - NEXT_PUBLIC_POSTHOG_HOST=${NEXT_PUBLIC_POSTHOG_HOST:-https://app.posthog.com}
+    container_name: quant-platform-ui
+    ports:
+      # Do not expose the UI dev server publicly; access it via nginx only.
+      - "127.0.0.1:3000:3000"
+    environment:
+      - HOSTNAME=0.0.0.0
+      - API_URL=http://gateway:8000
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:8000/api}
+      - NEXT_PUBLIC_POSTHOG_KEY=${NEXT_PUBLIC_POSTHOG_KEY:-}
+      - NEXT_PUBLIC_POSTHOG_HOST=${NEXT_PUBLIC_POSTHOG_HOST:-https://app.posthog.com}
+      # NextAuth.js
+      - AUTH_SECRET=${NEXTAUTH_SECRET:-}
+      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET:-}
+      - NEXTAUTH_URL=${NEXTAUTH_URL:-https://quant-platform.com}
+      - AUTH_GOOGLE_ID=${GOOGLE_CLIENT_ID:-}
+      - AUTH_GOOGLE_SECRET=${GOOGLE_CLIENT_SECRET:-}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID:-}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET:-}
+      - DEMO_TOKEN=${DEMO_TOKEN:-}
+    depends_on:
+      - gateway
+    networks:
+      - quant-platform-frontend
+    read_only: true
+    tmpfs:
+      - /tmp:size=10M,mode=1777,uid=1001,gid=1001
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+
+  # Stock Data Updater (cron)
+  # Fetches index quotes every 15 min and EOD prices nightly.
+  # Writes to the stock_data volume; nginx serves those files directly.
+  cron:
+    build:
+      context: ..
+      dockerfile: infra/cron/Dockerfile
+    container_name: quant-platform-cron
+    volumes:
+      - stock_data:/app/ui/public
+    networks:
+      - quant-platform-backend
+    restart: unless-stopped
+
+  # =============================================================================
+  # OBSERVABILITY STACK
+  # =============================================================================
+
+  # OpenTelemetry Collector - Central telemetry hub
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.96.0
+    container_name: quant-platform-otel-collector
+    command: [ "--config=/etc/otel-collector-config.yaml" ]
+    environment:
+      - OTEL_ENVIRONMENT=production
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml:ro
+    ports:
+      - "127.0.0.1:4317:4317" # OTLP gRPC
+      - "127.0.0.1:4318:4318" # OTLP HTTP
+      - "127.0.0.1:8889:8889" # Prometheus metrics export
+    networks:
+      - quant-platform-observability
+    depends_on:
+      - jaeger
+      - loki
+
+  # Jaeger - Distributed Tracing
+  jaeger:
+    image: jaegertracing/all-in-one:1.54
+    container_name: quant-platform-jaeger
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    ports:
+      - "127.0.0.1:16686:16686" # Jaeger UI
+      - "127.0.0.1:14268:14268" # Jaeger HTTP collector
+    networks:
+      - quant-platform-observability
+
+  # Loki - Log Aggregation
+  loki:
+    image: grafana/loki:2.9.4
+    container_name: quant-platform-loki
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - ./loki-config.yaml:/etc/loki/local-config.yaml:ro
+      - loki_data:/loki
+    ports:
+      - "127.0.0.1:3100:3100"
+    networks:
+      - quant-platform-observability
+
+  # Prometheus - Metrics
+  prometheus:
+    image: prom/prometheus:v2.50.1
+    container_name: quant-platform-prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.enable-lifecycle'
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus-alerts.yml:/etc/prometheus/prometheus-alerts.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "127.0.0.1:9090:9090"
+    networks:
+      - quant-platform-observability
+    depends_on:
+      - otel-collector
+      - alertmanager
+
+  # Alertmanager - Alert routing and notifications
+  alertmanager:
+    image: prom/alertmanager:v0.28.1
+    container_name: quant-platform-alertmanager
+    entrypoint: ["/bin/sh", "/entrypoint.sh"]
+    environment:
+      - ALERT_SLACK_WEBHOOK_URL=${ALERT_SLACK_WEBHOOK_URL:-}
+      - ALERT_SLACK_CHANNEL=${ALERT_SLACK_CHANNEL:-}
+      - ALERT_WEBHOOK_URL=${ALERT_WEBHOOK_URL:-}
+      - ALERT_GROUP_WAIT=${ALERT_GROUP_WAIT:-30s}
+      - ALERT_GROUP_INTERVAL=${ALERT_GROUP_INTERVAL:-5m}
+      - ALERT_REPEAT_INTERVAL=${ALERT_REPEAT_INTERVAL:-4h}
+    volumes:
+      - ./alertmanager/entrypoint.sh:/entrypoint.sh:ro
+      - alertmanager_data:/alertmanager
+    ports:
+      - "127.0.0.1:9093:9093"
+    networks:
+      - quant-platform-observability
+
+  # Grafana - Dashboards & Visualization
+  grafana:
+    image: grafana/grafana:10.3.3
+    container_name: quant-platform-grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GF_SECURITY_ADMIN_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GF_SECURITY_ADMIN_PASSWORD:-CHANGE_ME_IMMEDIATELY}
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_USERS_ALLOW_ORG_CREATE=false
+      - GF_AUTH_ANONYMOUS_ENABLED=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+    ports:
+      - "127.0.0.1:3001:3000"
+    networks:
+      - quant-platform-frontend
+      - quant-platform-observability
+    depends_on:
+      - prometheus
+      - alertmanager
+      - jaeger
+      - loki
+
+  # Nginx - Reverse Proxy & Entry Point
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: quant-platform-nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ${NGINX_SSL_CERT_PATH:-/etc/letsencrypt/live/quant-platform.com/fullchain.pem}:/etc/nginx/ssl/origin.crt:ro
+      - ${NGINX_SSL_KEY_PATH:-/etc/letsencrypt/live/quant-platform.com/privkey.pem}:/etc/nginx/ssl/origin.key:ro
+      - stock_data:/srv/stock-data:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      ui:
+        condition: service_started
+      gateway:
+        condition: service_started
+      grafana:
+        condition: service_started
+      ai-engine:
+        condition: service_healthy
+    networks:
+      - quant-platform-frontend
+      - quant-platform-backend
+      - quant-platform-observability
+    extra_hosts:
+      # Allows nginx container to proxy to services bound on the host (useful for ArgoCD on k3s/host).
+      - "host.docker.internal:host-gateway"
+    restart: always
+    read_only: true
+    tmpfs:
+      - /var/run:size=1M,mode=0755
+      - /var/cache/nginx:size=10M,mode=0755
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_BIND_SERVICE
+      - CHOWN
+      - SETUID
+      - SETGID
+
+networks:
+  quant-platform-frontend:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: quant-platform-front
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+
+  quant-platform-backend:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: quant-platform-back
+    ipam:
+      config:
+        - subnet: 172.21.0.0/24
+    internal: false
+
+  quant-platform-observability:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: quant-platform-obs
+    ipam:
+      config:
+        - subnet: 172.22.0.0/24
+    internal: true
+
+volumes:
+  postgres_data:
+  ai_cache:
+  loki_data:
+  prometheus_data:
+  alertmanager_data:
+  grafana_data:
+  stock_data:

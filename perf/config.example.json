@@ -1,0 +1,42 @@
+{
+  "environment": "staging",
+  "allowed_environments": ["staging"],
+  "allowed_base_urls": ["https://staging.example.com"],
+  "base_url": "https://staging.example.com",
+  "concurrency": 4,
+  "duration_seconds": 30,
+  "warmup_seconds": 5,
+  "timeout_seconds": 10,
+  "auth": {
+    "type": "bearer",
+    "token_env": "PERF_AUTH_TOKEN"
+  },
+  "headers": {
+    "Accept": "application/json"
+  },
+  "endpoints": [
+    {
+      "name": "example_endpoint",
+      "method": "GET",
+      "path": "/api/example",
+      "route": "/api/example"
+    }
+  ],
+  "prometheus": {
+    "base_url": "http://prometheus:9090",
+    "queries": {
+      "gateway_event_loop_lag_ms_p95": {
+        "query": "quantile_over_time(0.95, quant-platform_event_loop_lag_ms{service_name=\"quant-platform-gateway\"}[5m])"
+      },
+      "gateway_queue_wait_ms_p95": {
+        "query": "histogram_quantile(0.95, sum(rate(quant-platform_queue_wait_ms_bucket{service_name=\"quant-platform-gateway\"}[5m])) by (le))"
+      }
+    }
+  },
+  "jaeger": {
+    "base_url": "http://jaeger:16686",
+    "service": "quant-platform-gateway",
+    "limit": 20,
+    "concurrency_span_names": ["external_api.wait", "db.pool.wait", "db.query"]
+  }
+}

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Glitch Art</title>
+    <style>
+        :root,
+        [data-theme="dark"] {
+            --bg-color: #15110c;
+            --text-color: #EFE4D8;
+            --btn-bg: #231e17;
+            --btn-hover: #362e25;
+            --btn-border: #4a4238;
+            --stage-border: #4a4238;
+        }
+
+        [data-theme="light"] {
+            --bg-color: #fbf7f0;
+            --text-color: #15110c;
+            --btn-bg: #ffffff;
+            --btn-hover: #EFE4D8;
+            --btn-border: #e2d5c5;
+            --stage-border: #e2d5c5;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .control-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #stageWrap {
+            position: relative;
+            border: 1px solid var(--stage-border);
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        video {
+            display: none;
+        }
+
+        button,
+        label.btn,
+        select,
+        input[type="color"] {
+            background: var(--btn-bg);
+            color: var(--text-color);
+            border: 1px solid var(--btn-border);
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-align: center;
+            color-scheme: dark light;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        button:hover,
+        label.btn:hover,
+        select:hover {
+            background: var(--btn-hover);
+        }
+
+        button:disabled,
+        label.btn.is-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        input[type="color"] {
+            padding: 2px 5px;
+            height: 35px;
+            width: 60px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Video Glitch Tool</h1>
+    <div class="controls">
+        <label class="btn file">
+            Upload Video
+            <input type="file" id="videoFile" accept="video/*" />
+        </label>
+
+        <!-- Webcam removed per user instructions -->
+        <button id="exampleBtn" style="display:none;">Load Example</button>
+
+        <div class="control-group">
+            <label>UI Theme</label>
+            <select id="uiTheme">
+                <option value="system">System Default</option>
+                <option value="dark">Dark Theme</option>
+                <option value="light">Light Theme</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label>Glitch Dark Tone</label>
+            <input type="color" id="glitchFg" value="#15110c">
+        </div>
+        <div class="control-group">
+            <label>Glitch Light Tone</label>
+            <div style="display: flex; gap: 5px; align-items: center;">
+                <input type="color" id="glitchBg" value="#d4ba99">
+                <button id="swapColorsBtn" title="Swap Colors">⇄</button>
+            </div>
+        </div>
+        <div class="control-group">
+            <label>Transparent Background</label>
+            <select id="transparentMode">
+                <option value="none">None (Solid)</option>
+                <option value="light">Light Tone Transparent</option>
+                <option value="dark">Dark Tone Transparent</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label>Line Density</label>
+            <input type="range" id="lineDensity" min="2" max="20" value="8" step="1">
+            <span id="lineDensityVal">8px</span>
+        </div>
+
+        <input type="color" id="glitchBg" value="#d4ba99">
+    </div>
+    <div class="control-group">
+        <label>Jitter</label>
+        <input type="range" id="jitter" min="0" max="100" value="20" step="1">
+        <span id="jitterVal">20px</span>
+    </div>
+    <div class="control-group">
+        <label>Threshold</label>
+        <input type="range" id="threshold" min="0" max="1" value="0.5" step="0.01">
+        <span id="thresholdVal">0.50</span>
+    </div>
+    <div class="control-group">
+        <label>Bypass Art</label>
+        <input type="checkbox" id="bypassArt">
+    </div>
+
+    <button id="recordBtn" style="display:none;">Record Snippet</button>
+    <button id="stopRecordBtn" style="display:none;">Stop Snippet</button>
+    <button id="exportWebmBtn">Export Full Video</button>
+
+    <div id="status">Status: Waiting for video</div>
+    </div>
+
+    <div id="stageSlot" style="width: 100%; max-width: 1280px; aspect-ratio: 16/9;">
+        <div id="stageWrap">
+            <canvas id="glCanvas"></canvas>
+            <video id="videoEl" playsinline crossorigin="anonymous"></video>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById("glCanvas");
+        const video = document.getElementById("videoEl");
+        const statusEl = document.getElementById("status");
+        const stageWrap = document.getElementById("stageWrap");
+        const stageSlot = document.getElementById("stageSlot");
+
+        const lineDensity = document.getElementById("lineDensity");
+        const jitter = document.getElementById("jitter");
+        const threshold = document.getElementById("threshold");
+        const lineDensityVal = document.getElementById("lineDensityVal");
+        const jitterVal = document.getElementById("jitterVal");
+        const thresholdVal = document.getElementById("thresholdVal");
+        const bypassArt = document.getElementById("bypassArt");
+        const transparentMode = document.getElementById("transparentMode");
+
+        const uiTheme = document.getElementById("uiTheme");
+        const glitchFg = document.getElementById("glitchFg");
+        const glitchBg = document.getElementById("glitchBg");
+        const swapColorsBtn = document.getElementById("swapColorsBtn");
+
+        const videoFileInput = document.getElementById("videoFile");
+        const uploadVideoBtn = document.querySelector("label.btn.file");
+        // We mocked these to prevent errors since the script references them
+        const exampleBtn = document.getElementById("exampleBtn");
+        const recordBtn = document.getElementById("recordBtn");
+        const stopRecordBtn = document.getElementById("stopRecordBtn");
+        const exportWebmBtn = document.getElementById("exportWebmBtn");
+
+        const gl = canvas.getContext("webgl", { alpha: true, antialias: false, premultipliedAlpha: false });
+        if (!gl) {
+            throw new Error("WebGL is not available");
+        }
+
+        const vertexSource = `
+        attribute vec2 a_pos;
+        varying vec2 v_uv;
+        void main() {
+          v_uv = a_pos * 0.5 + 0.5;
+          gl_Position = vec4(a_pos, 0.0, 1.0);
+        }
+        `;
+
+        const fragmentSource = `
+        precision mediump float;
+        varying vec2 v_uv;
+        uniform sampler2D u_tex;
+        uniform vec2 u_resolution;
+        uniform vec2 u_videoSize;
+        uniform float u_time;
+        uniform float u_threshold;
+        uniform float u_lineDensity;
+        uniform float u_jitterPx;
+        uniform float u_artEnabled;
+        uniform float u_transparentMode; // 0.0=none, 1.0=light transparent, 2.0=dark transparent
+        uniform vec3 u_fg;
+        uniform vec3 u_bg;
+
+        float hash(float n) {
+          return fract(sin(n) * 43758.5453123);
+        }
+
+        void main() {
+          vec2 uv = v_uv;
+          float yPx = uv.y * u_resolution.y;
+
+          float canvasAspect = u_resolution.x / u_resolution.y;
+          float videoAspect = u_videoSize.x / u_videoSize.y;
+          vec2 sampleUV = uv;
+          if (videoAspect > canvasAspect) {
+            float scale = canvasAspect / videoAspect;
+            sampleUV.y = (uv.y - 0.5) * scale + 0.5;
+          } else {
+            float scale = videoAspect / canvasAspect;
+            sampleUV.x = (uv.x - 0.5) * scale + 0.5;
+          }
+
+          if (u_artEnabled < 0.5) {
+            sampleUV = clamp(sampleUV, 0.0, 1.0);
+            vec3 rawColor = texture2D(u_tex, sampleUV).rgb;
+            gl_FragColor = vec4(rawColor, 1.0);
+            return;
+          }
+
+          float lineGapPx = max(2.0, u_lineDensity);
+          float local = mod(yPx, lineGapPx);
+          float lineWidth = max(1.0, lineGapPx * 0.42);
+          if (local > lineWidth) {
+            // This is the background space
+            if (u_transparentMode == 1.0) {
+                gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
+            } else {
+                gl_FragColor = vec4(u_bg, 1.0);
+            }
+            return;
+          }
+
+          float row = floor(yPx / lineGapPx);
+          float jitterSeed = row * 19.19 + floor(u_time * 18.0);
+          float n = hash(jitterSeed) * 2.0 - 1.0;
+          float wobble = sin(u_time * 8.0 + row * 0.45) * 0.5;
+          float jitterNorm = (n * 0.7 + wobble * 0.3) * (u_jitterPx / u_resolution.x);
+          sampleUV.x += jitterNorm;
+          sampleUV = clamp(sampleUV, 0.0, 1.0);
+
+          vec3 c = texture2D(u_tex, sampleUV).rgb;
+          float luma = dot(c, vec3(0.2126, 0.7152, 0.0722));
+          float bw = step(u_threshold, luma);
+          
+          if (u_transparentMode == 1.0 && bw > 0.5) {
+             gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
+             return;
+          }
+          if (u_transparentMode == 2.0 && bw < 0.5) {
+             gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
+             return;
+          }
+          
+          vec3 outColor = mix(u_fg, u_bg, bw);
+
+          gl_FragColor = vec4(outColor, 1.0);
+        }
+        `;
+
+        function createShader(type, src) {
+            const shader = gl.createShader(type);
+            gl.shaderSource(shader, src);
+            gl.compileShader(shader);
+            if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                throw new Error(gl.getShaderInfoLog(shader) || "Shader compile failed");
+            }
+            return shader;
+        }
+
+        function createProgram(vs, fs) {
+            const program = gl.createProgram();
+            gl.attachShader(program, vs);
+            gl.attachShader(program, fs);
+            gl.linkProgram(program);
+            if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+                throw new Error(gl.getProgramInfoLog(program) || "Program link failed");
+            }
+            return program;
+        }
+
+        const program = createProgram(
+            createShader(gl.VERTEX_SHADER, vertexSource),
+            createShader(gl.FRAGMENT_SHADER, fragmentSource)
+        );
+        gl.useProgram(program);
+
+        const buffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+
+        const aPos = gl.getAttribLocation(program, "a_pos");
+        gl.enableVertexAttribArray(aPos);
+        gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+        const uniforms = {
+            tex: gl.getUniformLocation(program, "u_tex"),
+            resolution: gl.getUniformLocation(program, "u_resolution"),
+            videoSize: gl.getUniformLocation(program, "u_videoSize"),
+            time: gl.getUniformLocation(program, "u_time"),
+            threshold: gl.getUniformLocation(program, "u_threshold"),
+            lineDensity: gl.getUniformLocation(program, "u_lineDensity"),
+            jitterPx: gl.getUniformLocation(program, "u_jitterPx"),
+            artEnabled: gl.getUniformLocation(program, "u_artEnabled"),
+            transparentMode: gl.getUniformLocation(program, "u_transparentMode"),
+            fg: gl.getUniformLocation(program, "u_fg"),
+            bg: gl.getUniformLocation(program, "u_bg")
+        };
+
+        const texture = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+
+        gl.uniform1i(uniforms.tex, 0);
+        gl.uniform1f(uniforms.artEnabled, 1);
+
+        function hexToRgb(hex) {
+            const r = parseInt(hex.slice(1, 3), 16) / 255;
+            const g = parseInt(hex.slice(3, 5), 16) / 255;
+            const b = parseInt(hex.slice(5, 7), 16) / 255;
+            return [r, g, b];
+        }
+
+        function applyTheme(theme) {
+            if (theme === "system") {
+                const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+                document.documentElement.setAttribute("data-theme", prefersLight ? "light" : "dark");
+            } else {
+                document.documentElement.setAttribute("data-theme", theme);
+            }
+        }
+
+        uiTheme.addEventListener("change", (e) => applyTheme(e.target.value));
+        window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", () => {
+            if (uiTheme.value === "system") applyTheme("system");
+        });
+        applyTheme("system"); // Initial apply
+
+        swapColorsBtn.addEventListener("click", () => {
+            const temp = glitchFg.value;
+            glitchFg.value = glitchBg.value;
+            glitchBg.value = temp;
+        });
+
+        let rafId = null;
+        let mediaRecorder = null;
+        let recordChunks = [];
+        let sourceSwitching = false;
+        let sourceMode = "none";
+        let fullExporting = false;
+        let fullExportTimer = null;
+
+        function setStatus(msg, isErr = false) {
+            statusEl.textContent = `Status: ${msg}`;
+            statusEl.style.color = isErr ? "#ff9f9f" : "#65d0a5";
+        }
+
+        function hasInputSource() {
+            return Boolean(video.srcObject || video.getAttribute("src"));
+        }
+
+        function hasRenderableFrame() {
+            return video.readyState >= 2 && video.videoWidth > 0 && video.videoHeight > 0;
+        }
+
+        function updateControlState() {
+            const isRecording = Boolean(mediaRecorder && mediaRecorder.state === "recording");
+            const isBusy = isRecording || sourceSwitching || fullExporting;
+            const hasInput = hasInputSource();
+            const canRender = hasRenderableFrame();
+            const isFileSource = sourceMode === "file" || sourceMode === "example";
+
+            if (videoFileInput) videoFileInput.disabled = isBusy;
+            if (uploadVideoBtn) uploadVideoBtn.classList.toggle("is-disabled", Boolean(videoFileInput && videoFileInput.disabled));
+            exampleBtn.disabled = isBusy;
+            exportWebmBtn.disabled = !isFileSource || !canRender || isBusy;
+            stopRecordBtn.disabled = !isRecording;
+        }
+
+        function updateLabels() {
+            lineDensityVal.textContent = `${Number(lineDensity.value).toFixed(0)}px`;
+            jitterVal.textContent = `${Number(jitter.value).toFixed(0)}px`;
+            thresholdVal.textContent = Number(threshold.value).toFixed(2);
+        }
+
+        function resizeCanvas() {
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const rect = canvas.getBoundingClientRect();
+            const width = Math.max(2, Math.floor(rect.width * dpr));
+            const height = Math.max(2, Math.floor(rect.height * dpr));
+            if (canvas.width !== width || canvas.height !== height) {
+                canvas.width = width;
+                canvas.height = height;
+            }
+            gl.viewport(0, 0, canvas.width, canvas.height);
+        }
+
+        function syncStageAspect() {
+            fitStageSize();
+        }
+
+        function fitStageSize() {
+            const vw = video.videoWidth || 16;
+            const vh = video.videoHeight || 9;
+            const ratio = vw / vh;
+
+            const parentWidth = stageSlot ? stageSlot.clientWidth - 2 : window.innerWidth;
+            const parentHeight = stageSlot ? stageSlot.clientHeight - 2 : window.innerHeight;
+            const viewportMaxH = Math.max(220, Math.min(parentHeight, window.innerHeight - 70));
+
+            let width = parentWidth;
+            let height = width / ratio;
+
+            if (height > viewportMaxH) {
+                height = viewportMaxH;
+                width = height * ratio;
+            }
+
+            stageWrap.style.width = `${Math.floor(width)}px`;
+            stageWrap.style.height = `${Math.floor(height)}px`;
+        }
+
+        function resetVideoState() {
+            video.pause();
+            video.srcObject = null;
+            video.removeAttribute("src");
+            video.load();
+            try {
+                video.currentTime = 0;
+            } catch (err) {
+                // Ignore currentTime reset errors for detached streams.
+            }
+            if (videoFileInput) videoFileInput.value = "";
+            sourceMode = "none";
+            fitStageSize();
+        }
+
+
+
+        videoFileInput.addEventListener("change", async (e) => {
+            const file = e.target.files && e.target.files[0];
+            if (!file) return;
+            sourceSwitching = true;
+            updateControlState();
+            video.srcObject = null;
+            video.src = URL.createObjectURL(file);
+            sourceMode = "file";
+            try {
+                await video.play();
+                syncStageAspect();
+                setStatus(`Loaded file: ${file.name}`);
+            } catch (err) {
+                setStatus(`Video playback failed: ${err.message}`, true);
+            } finally {
+                sourceSwitching = false;
+                updateControlState();
+            }
+        });
+
+        exampleBtn.addEventListener("click", () => { });
+
+        lineDensity.addEventListener("input", updateLabels);
+        jitter.addEventListener("input", updateLabels);
+        threshold.addEventListener("input", updateLabels);
+        updateLabels();
+        video.addEventListener("loadedmetadata", syncStageAspect);
+        video.addEventListener("loadeddata", updateControlState);
+        video.addEventListener("play", updateControlState);
+        video.addEventListener("pause", updateControlState);
+        video.addEventListener("ended", updateControlState);
+        video.addEventListener("emptied", updateControlState);
+        bypassArt.addEventListener("change", () => {
+            setStatus(bypassArt.checked ? "Raw mode: Original preview active" : "Art mode: Glitch effect active");
+        });
+
+        function drawFrame(timeMs) {
+            resizeCanvas();
+            gl.clearColor(0, 0, 0, 0);
+            gl.clear(gl.COLOR_BUFFER_BIT);
+
+            if (video.readyState >= 2 && video.videoWidth > 0 && video.videoHeight > 0) {
+                gl.activeTexture(gl.TEXTURE0);
+                gl.bindTexture(gl.TEXTURE_2D, texture);
+                gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 1);
+                gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, video);
+
+                gl.uniform2f(uniforms.resolution, canvas.width, canvas.height);
+                gl.uniform2f(uniforms.videoSize, video.videoWidth, video.videoHeight);
+                gl.uniform1f(uniforms.time, timeMs * 0.001);
+                gl.uniform1f(uniforms.threshold, Number(threshold.value));
+                gl.uniform1f(uniforms.lineDensity, Number(lineDensity.value));
+                gl.uniform1f(uniforms.jitterPx, Number(jitter.value));
+                gl.uniform1f(uniforms.artEnabled, bypassArt.checked ? 0 : 1);
+
+                let transModeValue = 0.0;
+                if (transparentMode.value === "light") transModeValue = 1.0;
+                if (transparentMode.value === "dark") transModeValue = 2.0;
+                gl.uniform1f(uniforms.transparentMode, transModeValue);
+
+                const fg = hexToRgb(glitchFg.value);
+                const bg = hexToRgb(glitchBg.value);
+                gl.uniform3f(uniforms.fg, fg[0], fg[1], fg[2]);
+                gl.uniform3f(uniforms.bg, bg[0], bg[1], bg[2]);
+
+                gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+            }
+
+            rafId = requestAnimationFrame(drawFrame);
+        }
+
+        function stopRender() {
+            if (rafId != null) cancelAnimationFrame(rafId);
+        }
+
+        function getSupportedMimeType() {
+            const candidates = ["video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"];
+            for (const type of candidates) {
+                if (MediaRecorder.isTypeSupported(type)) return type;
+            }
+            return "";
+        }
+
+        recordBtn.addEventListener("click", () => { });
+        stopRecordBtn.addEventListener("click", () => { });
+
+        exportWebmBtn.addEventListener("click", async () => {
+            if (fullExporting) return;
+            if (!(sourceMode === "file" || sourceMode === "example")) {
+                setStatus("Full export is available for video file sources only.", true);
+                return;
+            }
+            if (!hasRenderableFrame()) {
+                setStatus("Video is not ready to export yet.", true);
+                return;
+            }
+            if (!Number.isFinite(video.duration) || video.duration <= 0) {
+                setStatus("Cannot export: invalid video duration.", true);
+                return;
+            }
+
+            const mimeType = getSupportedMimeType();
+            if (!mimeType) {
+                setStatus("Current browser does not support WebM recording", true);
+                return;
+            }
+
+            const stream = canvas.captureStream(30);
+            recordChunks = [];
+            mediaRecorder = new MediaRecorder(stream, { mimeType });
+            const originalLoop = video.loop;
+
+            fullExporting = true;
+            updateControlState();
+
+            mediaRecorder.ondataavailable = (e) => {
+                if (e.data && e.data.size > 0) recordChunks.push(e.data);
+            };
+            mediaRecorder.onerror = (e) => {
+                const msg = e && e.error && e.error.message ? e.error.message : "Unknown recording error";
+                fullExporting = false;
+                setStatus(`Export failed: ${msg}`, true);
+                updateControlState();
+            };
+            mediaRecorder.onstop = () => {
+                video.loop = originalLoop;
+                if (fullExportTimer) {
+                    clearInterval(fullExportTimer);
+                    fullExportTimer = null;
+                }
+                fullExporting = false;
+
+                if (!recordChunks.length) {
+                    setStatus("Export failed: no data captured.", true);
+                    updateControlState();
+                    return;
+                }
+                const blob = new Blob(recordChunks, { type: mimeType });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = `glitch-art-full-${Date.now()}.webm`;
+                a.click();
+                URL.revokeObjectURL(url);
+                setStatus("Full WebM exported");
+                updateControlState();
+            };
+
+            video.loop = false;
+            video.pause();
+            try {
+                video.currentTime = 0;
+            } catch (err) {
+                // ignore seek errors
+            }
+
+            video.addEventListener(
+                "ended",
+                () => {
+                    if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop();
+                },
+                { once: true }
+            );
+
+            fullExportTimer = setInterval(() => {
+                const d = Number.isFinite(video.duration) ? video.duration : 0;
+                const pct = d > 0 ? Math.min(99, Math.floor((video.currentTime / d) * 100)) : 0;
+                setStatus(`Exporting full WebM... ${pct}%`);
+            }, 150);
+
+            mediaRecorder.start(200);
+            setStatus("Exporting full WebM... 0%");
+            try {
+                await video.play();
+            } catch (err) {
+                if (fullExportTimer) {
+                    clearInterval(fullExportTimer);
+                    fullExportTimer = null;
+                }
+                video.loop = originalLoop;
+                fullExporting = false;
+                if (mediaRecorder && mediaRecorder.state === "recording") mediaRecorder.stop();
+                setStatus(`Export failed: ${err.message}`, true);
+                updateControlState();
+            }
+        });
+
+        window.addEventListener("resize", resizeCanvas);
+        window.addEventListener("resize", fitStageSize);
+        window.addEventListener("beforeunload", () => {
+            stopRender();
+            if (fullExportTimer) clearInterval(fullExportTimer);
+        });
+
+        fitStageSize();
+        resizeCanvas();
+        updateControlState();
+        drawFrame(0);
+    </script>
+</body>
+
+</html>

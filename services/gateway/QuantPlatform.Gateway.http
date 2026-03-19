@@ -1,0 +1,6 @@
+@QuantPlatform.Gateway_HostAddress = http://localhost:5168
+
+GET {{QuantPlatform.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,8 @@
+# Stock data updater cron jobs
+# All times UTC. Market hours are roughly 14:30-21:00 UTC (9:30-16:00 ET).
+
+# Index quotes: every 15 min during market hours Mon-Fri
+*/15 14-21 * * 1-5 root python3 /app/scripts/fetch-index-quotes.py >> /var/log/cron.log 2>&1
+
+# EOD prices: once daily after market close Mon-Fri (22:00 UTC = 17:00 ET)
+0 22 * * 1-5 root python3 /app/scripts/fetch-eod-prices.py --period 1y >> /var/log/cron.log 2>&1

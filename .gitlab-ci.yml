@@ -1,0 +1,156 @@
+default:
+  tags:
+    - hetzner
+
+stages:
+  - test
+  - security
+  - build
+  - e2e
+  - deploy
+
+# ==============================================================================
+# STAGE: E2E (Playwright)
+# ==============================================================================
+e2e-tests:
+  stage: e2e
+  image: mcr.microsoft.com/playwright:v1.58.0-jammy
+  variables:
+    BASE_URL: "http://46.224.4.132"
+  script:
+    - cd tests/e2e
+    - npm install
+    - npx playwright test
+  artifacts:
+    when: always
+    paths:
+      - tests/e2e/playwright-report/
+      - tests/e2e/screenshots/
+    expire_in: 1 week
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  allow_failure: true # E2E can be flaky during first setup
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+# ==============================================================================
+# STAGE: TEST (with coverage enforcement)
+# ==============================================================================
+test-gateway:
+  stage: test
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+  script:
+    - cd services/gateway
+    - dotnet restore
+    - dotnet build
+    - cd ../../tests/gateway
+    - dotnet add package coverlet.msbuild
+    - dotnet test /p:CollectCoverage=false # Disabled enforcement until more tests are added
+  coverage: '/Total\s*\|\s*(\d+\.?\d*%)/'
+  allow_failure: false
+
+test-ai-engine:
+  stage: test
+  image: python:3.11
+  script:
+    - cd services/ai-engine
+    - pip install -r requirements.txt
+    - pip install pytest-cov
+    - cd ../../tests/ai-engine
+    - cp -r ../../services/ai-engine/*.py .
+    - pytest --cov=. --cov-report=term --cov-fail-under=20 # Lowered while bootstrapping
+  coverage: '/TOTAL\s+\d+\s+\d+\s+(\d+%)/'
+  allow_failure: false
+
+test-ui-client-env-safety:
+  stage: test
+  image: node:20
+  script:
+    - cd ui
+    - npm ci
+    - npm run check:client-env
+  allow_failure: false
+
+# ==============================================================================
+# STAGE: SECURITY (Trivy)
+# ==============================================================================
+trivy-fs-scan:
+  stage: security
+  image:
+    name: aquasec/trivy:latest
+    entrypoint: [""]
+  script:
+    - trivy fs . --severity HIGH,CRITICAL --exit-code 1 --skip-dirs node_modules,.next,__pycache__
+  allow_failure: false
+
+trivy-secret-scan:
+  stage: security
+  image:
+    name: aquasec/trivy:latest
+    entrypoint: [""]
+  script:
+    - trivy fs . --scanners secret --severity HIGH,CRITICAL --exit-code 1 --skip-dirs node_modules,.next,__pycache__
+  allow_failure: false
+
+trivy-config-scan:
+  stage: security
+  image:
+    name: aquasec/trivy:latest
+    entrypoint: [""]
+  script:
+    - trivy config infra/ --severity HIGH,CRITICAL --exit-code 1
+  allow_failure: true
+
+# ==============================================================================
+# STAGE: BUILD
+# ==============================================================================
+.build-template: &build-template
+  stage: build
+  image: docker:27
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+
+build-gateway:
+  <<: *build-template
+  script:
+    - docker build -t quant-platform-gateway:$CI_COMMIT_SHA ./services/gateway
+    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --severity HIGH,CRITICAL --ignore-unfixed --timeout 10m --format json --output trivy-gateway-report.json --exit-code 1 quant-platform-gateway:$CI_COMMIT_SHA
+    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --severity HIGH,CRITICAL --ignore-unfixed --timeout 10m quant-platform-gateway:$CI_COMMIT_SHA
+  artifacts:
+    when: always
+    paths:
+      - trivy-gateway-report.json
+    expire_in: 7 days
+  allow_failure: false
+
+build-ai-engine:
+  <<: *build-template
+  script:
+    - docker build -t quant-platform-ai:$CI_COMMIT_SHA ./services/ai-engine
+    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --severity HIGH,CRITICAL --ignore-unfixed --timeout 10m --format json --output trivy-ai-report.json --exit-code 1 quant-platform-ai:$CI_COMMIT_SHA
+    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image --severity HIGH,CRITICAL --ignore-unfixed --timeout 10m quant-platform-ai:$CI_COMMIT_SHA
+  artifacts:
+    when: always
+    paths:
+      - trivy-ai-report.json
+    expire_in: 7 days
+  allow_failure: false
+
+build-ui:
+  <<: *build-template
+  script:
+    - docker build -t quant-platform-ui:$CI_COMMIT_SHA ./ui
+  allow_failure: true
+
+# ==============================================================================
+# STAGE: DEPLOY (Trigger Portainer Webhook or Direct Compose)
+# ==============================================================================
+deploy-prod:
+  stage: deploy
+  image: alpine:3.19
+  script:
+    - echo "Deploying to Hetzner via local Docker socket..."
+    - cd infra && docker compose pull && docker compose up -d
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"

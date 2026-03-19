@@ -1,0 +1,60 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+    timeout: 1s
+    send_batch_size: 1024
+  
+  resource:
+    attributes:
+      - key: service.environment
+        # OTel Collector env var syntax (not bash).
+        value: ${env:OTEL_ENVIRONMENT}
+        action: upsert
+
+exporters:
+  # Jaeger for Traces
+  otlp/jaeger:
+    endpoint: jaeger:4317
+    tls:
+      insecure: true
+
+  # Prometheus for Metrics
+  prometheus:
+    endpoint: 0.0.0.0:8889
+    namespace: quant-platform
+
+  # Loki for Logs
+  loki:
+    endpoint: http://loki:3100/loki/api/v1/push
+
+  # Debug logging
+  debug:
+    verbosity: basic
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch, resource]
+      exporters: [otlp/jaeger]
+    
+    metrics:
+      receivers: [otlp]
+      processors: [batch, resource]
+      exporters: [prometheus]
+    
+    logs:
+      receivers: [otlp]
+      processors: [batch, resource]
+      exporters: [loki]
+
+  telemetry:
+    logs:
+      level: info

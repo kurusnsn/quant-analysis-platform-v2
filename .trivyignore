@@ -1,0 +1,15 @@
+# =============================================================================
+# Trivy Ignore File - Accepted CVE Exceptions
+# =============================================================================
+# Document CVEs that are accepted risks or cannot be immediately patched.
+# Each entry should include:
+#   - CVE ID
+#   - Brief explanation
+#   - Plan/timeline for resolution (if applicable)
+#
+# Review this file regularly and remove exceptions when updates are available.
+# =============================================================================
+
+# Example entries (remove when not needed):
+# CVE-2024-XXXXX  # Python base image - no fix available, low exploitability
+# CVE-2024-YYYYY  # .NET dependency - fix scheduled for Q2 2024

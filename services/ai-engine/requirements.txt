@@ -1,0 +1,25 @@
+fastapi
+uvicorn
+pydantic
+yfinance
+pandas
+numpy
+scipy
+scikit-learn
+hmmlearn
+pytest
+requests
+tenacity
+transformers
+sentence-transformers
+praw
+groq
+llama-index
+llama-index-embeddings-huggingface
+opentelemetry-api
+opentelemetry-sdk
+opentelemetry-instrumentation-fastapi
+opentelemetry-instrumentation-requests
+opentelemetry-exporter-otlp
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch

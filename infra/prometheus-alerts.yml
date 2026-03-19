@@ -1,0 +1,114 @@
+groups:
+  - name: quant-platform-observability
+    rules:
+      - alert: OtelCollectorDown
+        expr: up{job="otel-collector"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          team: platform
+        annotations:
+          summary: "OpenTelemetry Collector is down"
+          description: "Prometheus cannot scrape otel-collector:8889 for more than 2 minutes."
+
+      - alert: GatewayTelemetryMissing
+        expr: absent_over_time(quant-platform_http_server_active_requests{exported_job="quant-platform/quant-platform-gateway"}[5m])
+        for: 5m
+        labels:
+          severity: critical
+          team: backend
+        annotations:
+          summary: "Gateway telemetry missing"
+          description: "No gateway OTEL metrics were observed in the last 5 minutes."
+
+      - alert: AIEngineTelemetryMissing
+        expr: absent_over_time(quant-platform_http_server_active_requests{exported_job="quant-platform/quant-platform-ai-engine"}[5m])
+        for: 5m
+        labels:
+          severity: critical
+          team: ai
+        annotations:
+          summary: "AI engine telemetry missing"
+          description: "No AI engine OTEL metrics were observed in the last 5 minutes."
+
+      - alert: OTELSpanExportFailures
+        expr: increase(otelcol_exporter_send_failed_spans[5m]) > 0
+        for: 2m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "OTEL span export failures detected"
+          description: "The collector failed to export spans in the last 5 minutes."
+
+      - alert: OTELMetricExportFailures
+        expr: increase(otelcol_exporter_send_failed_metric_points[5m]) > 0
+        for: 2m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "OTEL metric export failures detected"
+          description: "The collector failed to export metric points in the last 5 minutes."
+
+      - alert: GatewayHigh5xxRate
+        expr: |
+          (
+            sum(rate(quant-platform_http_server_request_duration_seconds_count{exported_job="quant-platform/quant-platform-gateway",http_response_status_code=~"5.."}[5m]))
+            /
+            clamp_min(sum(rate(quant-platform_http_server_request_duration_seconds_count{exported_job="quant-platform/quant-platform-gateway"}[5m])), 0.001)
+          ) > 0.05
+        for: 5m
+        labels:
+          severity: critical
+          team: backend
+        annotations:
+          summary: "Gateway 5xx rate is high"
+          description: "More than 5% of gateway requests are failing with 5xx over the last 5 minutes."
+
+      - alert: GatewayP95LatencyHigh
+        expr: |
+          histogram_quantile(
+            0.95,
+            sum by (le) (
+              rate(quant-platform_http_server_request_duration_seconds_bucket{exported_job="quant-platform/quant-platform-gateway"}[5m])
+            )
+          ) > 1.5
+        for: 10m
+        labels:
+          severity: warning
+          team: backend
+        annotations:
+          summary: "Gateway p95 latency is high"
+          description: "Gateway p95 request latency exceeded 1.5s for at least 10 minutes."
+
+      - alert: AIEngineHigh5xxRate
+        expr: |
+          (
+            sum(rate(quant-platform_http_server_request_duration_seconds_count{exported_job="quant-platform/quant-platform-ai-engine",http_response_status_code=~"5.."}[5m]))
+            /
+            clamp_min(sum(rate(quant-platform_http_server_request_duration_seconds_count{exported_job="quant-platform/quant-platform-ai-engine"}[5m])), 0.001)
+          ) > 0.05
+        for: 5m
+        labels:
+          severity: critical
+          team: ai
+        annotations:
+          summary: "AI engine 5xx rate is high"
+          description: "More than 5% of AI engine requests are failing with 5xx over the last 5 minutes."
+
+      - alert: AIEngineP95LatencyHigh
+        expr: |
+          histogram_quantile(
+            0.95,
+            sum by (le) (
+              rate(quant-platform_http_server_request_duration_seconds_bucket{exported_job="quant-platform/quant-platform-ai-engine"}[5m])
+            )
+          ) > 2.0
+        for: 10m
+        labels:
+          severity: warning
+          team: ai
+        annotations:
+          summary: "AI engine p95 latency is high"
+          description: "AI engine p95 request latency exceeded 2.0s for at least 10 minutes."

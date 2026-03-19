@@ -1,0 +1,2437 @@
+{
+  "ai stocks": {
+    "prompt": "AI stocks",
+    "watchlistName": "Ai Stocks — Moderate Risk",
+    "summary": "The artificial intelligence investment theme is compelling given the current macro dynamics, with companies like NVIDIA and AMD leading the charge in AI-driven technologies. The basket's average risk score of 50.375, with a standard deviation of 16.44, suggests a high-risk profile, which is further supported by the loss probability of 38.18% over the next 30 days. Notably, Palantir Technologies, with a risk score of 67, has a Sharpe ratio of 0.47 and a VaR95 of -6.93%, indicating a relatively high-risk profile. In contrast, companies like Microsoft and Alphabet have more moderate risk profiles, with risk scores of 42 and 16, respectively. The regime analysis suggests a mid-volatility environment, with a low persistence probability, implying potential shifts in market conditions. The artificial intelligence theme's attractiveness is also driven by the strong Sharpe ratios of companies like AMD, with a Sharpe ratio of 0.95, and Alphabet, with a Sharpe ratio of 1.84, which indicate robust risk-adjusted returns.\n\nThe highest-risk name in the basket is Palantir Technologies, with a risk score of 67, driven by its high volatility of 69.0% and a VaR95 of -6.93%, which suggests a significant potential downside. On the other hand, the lowest-risk name is Alphabet, with a risk score of 16, driven by its low volatility of 24.2% and a VaR95 of -2.47%, which indicates a relatively stable profile. The risk scores are not tightly clustered, with a clear distinction between the high-risk and low-risk names. A specific catalyst that would materially change the outlook for this theme is a significant shift in the regulatory environment, particularly with regards to data privacy and AI ethics, which could impact the valuations of companies like Meta and Google. If the loss probability were to decrease below 30%, it could be a signal to increase exposure to the theme, particularly in companies like NVIDIA and AMD, which have demonstrated strong risk-adjusted returns.",
+    "insights": [],
+    "keyStats": {
+      "sp500_change": 0.62,
+      "nasdaq_change": 1.08,
+      "dow_change": 0.21,
+      "vix": 17.4
+    },
+    "savedAt": "2026-02-21T19:46:37.310Z",
+    "source": "seed",
+    "reasoning": null,
+    "model": "llama-3.3-70b-versatile",
+    "tickers": [
+      {
+        "symbol": "PLTR",
+        "name": "Palantir Technologies Inc.",
+        "sector": "Technology",
+        "price": 135.24,
+        "riskScore": 67,
+        "volatility_30d": 0.6903,
+        "sharpe_ratio": 0.47,
+        "var_95": -0.0693,
+        "cvar_95": -0.0987
+      },
+      {
+        "symbol": "ORCL",
+        "name": "Oracle Corporation",
+        "sector": "Technology",
+        "price": 148.08,
+        "riskScore": 65,
+        "volatility_30d": 0.6148,
+        "sharpe_ratio": -0.2,
+        "var_95": -0.0578,
+        "cvar_95": -0.0689
+      },
+      {
+        "symbol": "INTC",
+        "name": "Intel Corporation",
+        "sector": "Technology",
+        "price": 44.11,
+        "riskScore": 64,
+        "volatility_30d": 0.8881,
+        "sharpe_ratio": 0.88,
+        "var_95": -0.0617,
+        "cvar_95": -0.0849
+      },
+      {
+        "symbol": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
+        "sector": "Technology",
+        "price": 200.15,
+        "riskScore": 62,
+        "volatility_30d": 0.8197,
+        "sharpe_ratio": 0.95,
+        "var_95": -0.0552,
+        "cvar_95": -0.0843
+      },
+      {
+        "symbol": "META",
+        "name": "Meta Platforms, Inc.",
+        "sector": "Communication Services",
+        "price": 655.66,
+        "riskScore": 45,
+        "volatility_30d": 0.4793,
+        "sharpe_ratio": -0.1,
+        "var_95": -0.0322,
+        "cvar_95": -0.0538
+      },
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "sector": "Technology",
+        "price": 189.82,
+        "riskScore": 42,
+        "volatility_30d": 0.3815,
+        "sharpe_ratio": 0.79,
+        "var_95": -0.0428,
+        "cvar_95": -0.0635
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft Corporation",
+        "sector": "Technology",
+        "price": 397.23,
+        "riskScore": 42,
+        "volatility_30d": 0.4783,
+        "sharpe_ratio": -0.08,
+        "var_95": -0.0241,
+        "cvar_95": -0.0372
+      },
+      {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "sector": "Communication Services",
+        "price": 314.98,
+        "riskScore": 16,
+        "volatility_30d": 0.242,
+        "sharpe_ratio": 1.84,
+        "var_95": -0.0247,
+        "cvar_95": -0.0381
+      }
+    ],
+    "tickerExplanations": [
+      {
+        "symbol": "PLTR",
+        "rationale": "Palantir Technologies Inc. is at the forefront of the artificial intelligence theme, providing data integration and analytics solutions to drive business decisions. With a risk score of 67 and volatility of 69.0%, the stock exhibits high risk characteristics, while its Sharpe ratio of 0.47 indicates acceptable risk-adjusted returns. Its forward P/E of 74.0 is notably high, reflecting strong growth expectations.",
+        "financialHighlights": {
+          "marketCap": 322335932416,
+          "totalRevenue": 4475445760,
+          "netIncome": 1625032960,
+          "totalDebt": 229338000,
+          "epsDiluted": 0.64
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-17",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-02",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-04",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=10-Q"
+          }
+        ]
+      },
+      {
+        "symbol": "ORCL",
+        "rationale": "Oracle Corporation's artificial intelligence capabilities are deeply integrated into its cloud infrastructure and applications, supporting enterprise customers' digital transformations. The company's revenue change of +3.9% QoQ and forward P/E of 18.7 indicate stable growth prospects, despite a moderate risk score of 65 and VaR of -5.78%. Oracle's Sharpe ratio of -0.20 suggests poor risk-adjusted returns.",
+        "financialHighlights": {
+          "marketCap": 425595404288,
+          "totalRevenue": 61015998464,
+          "netIncome": 15425000448,
+          "totalDebt": 131729997824,
+          "epsDiluted": 5.32
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-05",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001341439&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-04",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001341439&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-09",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001341439&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "INTC",
+        "rationale": "Intel Corporation's role in the artificial intelligence theme is rooted in its semiconductor manufacturing, providing critical components for AI computing. Notably, Intel's Sharpe ratio of 0.88 indicates strong risk-adjusted returns, while its VaR of -6.17% and volatility of 88.8% suggest high potential losses. The company's revenue change of +3.5% QoQ is a positive sign.",
+        "financialHighlights": {
+          "marketCap": 220337324032,
+          "totalRevenue": 52852998144,
+          "netIncome": -267000000,
+          "totalDebt": 47109001216,
+          "epsDiluted": -0.06
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-23",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-01-23",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-22",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "rationale": "Advanced Micro Devices is a key player in the artificial intelligence theme, designing high-performance processors that power AI workloads. With a Sharpe ratio of 0.95, the stock demonstrates strong risk-adjusted returns, and its revenue change of +5.6% QoQ is among the highest in the group. AMD's forward P/E of 18.8 reflects moderate growth expectations.",
+        "financialHighlights": {
+          "marketCap": 326326714368,
+          "totalRevenue": 34638999552,
+          "netIncome": 4268999936,
+          "totalDebt": 4006000128,
+          "epsDiluted": 2.6
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-17",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-04",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-03",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "META",
+        "rationale": "Meta Platforms Inc. leverages artificial intelligence to drive its social media and online services, from content moderation to advertising targeting. The company's risk score of 45 and VaR of -3.22% indicate relatively lower risk, while its revenue change of +18.5% QoQ is a standout, driven by recovering ad demand. Meta's Sharpe ratio of -0.10 suggests poor risk-adjusted returns.",
+        "financialHighlights": {
+          "marketCap": 1658528202752,
+          "totalRevenue": 200965996544,
+          "netIncome": 60458000384,
+          "totalDebt": 85080997888,
+          "epsDiluted": 23.47
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-01-29",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-28",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-16",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "NVDA",
+        "rationale": "NVIDIA Corporation's graphics processing units are fundamental to artificial intelligence computing, supporting applications from gaming to enterprise AI deployments. The company's Sharpe ratio of 0.79 and VaR of -4.28% indicate strong risk-adjusted returns and moderate potential losses, respectively. NVIDIA's revenue change of +17.6% QoQ is a testament to its AI-driven growth.",
+        "financialHighlights": {
+          "marketCap": 4621547864064,
+          "totalRevenue": 187141996544,
+          "netIncome": 99198001152,
+          "totalDebt": 10821999616,
+          "epsDiluted": 4.04
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-23",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-19",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-19",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "rationale": "Microsoft Corporation's artificial intelligence capabilities are embedded across its product portfolio, from Azure cloud services to Office applications. With a risk score of 42 and VaR of -2.41%, the stock exhibits relatively lower risk, while its Sharpe ratio of -0.08 indicates poor risk-adjusted returns. Microsoft's revenue change of +8.1% QoQ reflects stable growth.",
+        "financialHighlights": {
+          "marketCap": 2952363507712,
+          "totalRevenue": 305453006848,
+          "netIncome": 119262003200,
+          "totalDebt": 123278000128,
+          "epsDiluted": 15.97
+        },
+        "filings": [
+          {
+            "form": "10-Q",
+            "filingDate": "2026-01-28",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-28",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-08",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "rationale": "Alphabet Inc.'s artificial intelligence research and development efforts are renowned, driving innovations in search, advertising, and cloud computing. The company's low risk score of 16, VaR of -2.47%, and Sharpe ratio of 1.84 indicate highly attractive risk-adjusted returns, while its revenue change of +10.6% QoQ is a notable highlight.",
+        "financialHighlights": {
+          "marketCap": 3810313371648,
+          "totalRevenue": 402835996672,
+          "netIncome": 132169998336,
+          "totalDebt": 66995998720,
+          "epsDiluted": 10.8
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-13",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-05",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-04",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=8-K"
+          }
+        ]
+      }
+    ]
+  },
+  "ai hardware leaders": {
+    "prompt": "AI hardware leaders",
+    "watchlistName": "Ai Hardware Leaders — Moderate Risk",
+    "summary": "The investment thesis for the \"AI\" theme is compelling, driven by the growing adoption of artificial intelligence technologies across various industries. The basket of stocks, including PLTR, ORCL, INTC, AMD, META, NVDA, MSFT, and GOOGL, offers a diversified play on this trend. With an average risk score of 50.375, the portfolio is classified as high-risk, but this is mitigated by the strong Sharpe ratios of certain constituents, such as AMD (0.95) and GOOGL (1.84). The regime analysis suggests a mid-volatility environment, with a low persistence probability, indicating a potential shift in market conditions. Notably, NVDA and MSFT, with risk scores of 42, demonstrate relatively lower risk profiles, while still offering exposure to the AI theme. The loss probability of 38.18% over the next 30 days highlights the need for careful risk management. Overall, the combination of growth potential and diversification in the AI theme makes it an attractive investment opportunity, with GOOGL's low risk score and high Sharpe ratio making it a standout in the portfolio.\n\nThe highest-risk name in the basket is PLTR, with a risk score of 67, driven by its high volatility (69.0% over 30 days) and relatively low Sharpe ratio (0.47). In contrast, the lowest-risk name is GOOGL, with a risk score of 16, benefiting from its low volatility (24.2% over 30 days) and high Sharpe ratio (1.84). The risk scores are not tightly clustered, with a standard deviation of 16.44, allowing for distinct risk profiles to emerge. A specific catalyst that would materially change the outlook for this portfolio is a significant shift in the regulatory environment, particularly with regards to data privacy and AI development. If the current regime were to shift towards a high-volatility environment, the portfolio's loss probability could increase, making it essential to monitor the regime volatility and adjust the portfolio accordingly.",
+    "insights": [],
+    "keyStats": {
+      "sp500_change": 0.62,
+      "nasdaq_change": 1.08,
+      "dow_change": 0.21,
+      "vix": 17.4
+    },
+    "savedAt": "2026-02-21T19:46:46.420Z",
+    "source": "seed",
+    "reasoning": null,
+    "model": "llama-3.3-70b-versatile",
+    "tickers": [
+      {
+        "symbol": "PLTR",
+        "name": "Palantir Technologies Inc.",
+        "sector": "Technology",
+        "price": 135.24,
+        "riskScore": 67,
+        "volatility_30d": 0.6903,
+        "sharpe_ratio": 0.47,
+        "var_95": -0.0693,
+        "cvar_95": -0.0987
+      },
+      {
+        "symbol": "ORCL",
+        "name": "Oracle Corporation",
+        "sector": "Technology",
+        "price": 148.08,
+        "riskScore": 65,
+        "volatility_30d": 0.6148,
+        "sharpe_ratio": -0.2,
+        "var_95": -0.0578,
+        "cvar_95": -0.0689
+      },
+      {
+        "symbol": "INTC",
+        "name": "Intel Corporation",
+        "sector": "Technology",
+        "price": 44.11,
+        "riskScore": 64,
+        "volatility_30d": 0.8881,
+        "sharpe_ratio": 0.88,
+        "var_95": -0.0617,
+        "cvar_95": -0.0849
+      },
+      {
+        "symbol": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
+        "sector": "Technology",
+        "price": 200.15,
+        "riskScore": 62,
+        "volatility_30d": 0.8197,
+        "sharpe_ratio": 0.95,
+        "var_95": -0.0552,
+        "cvar_95": -0.0843
+      },
+      {
+        "symbol": "META",
+        "name": "Meta Platforms, Inc.",
+        "sector": "Communication Services",
+        "price": 655.66,
+        "riskScore": 45,
+        "volatility_30d": 0.4793,
+        "sharpe_ratio": -0.1,
+        "var_95": -0.0322,
+        "cvar_95": -0.0538
+      },
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "sector": "Technology",
+        "price": 189.82,
+        "riskScore": 42,
+        "volatility_30d": 0.3815,
+        "sharpe_ratio": 0.79,
+        "var_95": -0.0428,
+        "cvar_95": -0.0635
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft Corporation",
+        "sector": "Technology",
+        "price": 397.23,
+        "riskScore": 42,
+        "volatility_30d": 0.4783,
+        "sharpe_ratio": -0.08,
+        "var_95": -0.0241,
+        "cvar_95": -0.0372
+      },
+      {
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "sector": "Communication Services",
+        "price": 314.98,
+        "riskScore": 16,
+        "volatility_30d": 0.242,
+        "sharpe_ratio": 1.84,
+        "var_95": -0.0247,
+        "cvar_95": -0.0381
+      }
+    ],
+    "tickerExplanations": [
+      {
+        "symbol": "PLTR",
+        "rationale": "Palantir Technologies is a key player in the AI theme, leveraging its data integration and analytics capabilities to drive AI-powered solutions. The stock's risk score of 67 and volatility of 69.0% indicate a high-risk investment, while its Sharpe ratio of 0.47 suggests acceptable risk-adjusted returns. Its forward P/E of 74.0 is notably high, reflecting strong growth expectations.",
+        "financialHighlights": {
+          "marketCap": 322335932416,
+          "totalRevenue": 4475445760,
+          "netIncome": 1625032960,
+          "totalDebt": 229338000,
+          "epsDiluted": 0.64
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-17",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-02",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-04",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655&type=10-Q"
+          }
+        ]
+      },
+      {
+        "symbol": "ORCL",
+        "rationale": "Driven by its cloud infrastructure and AI-driven applications, Oracle Corporation plays a direct role in the AI theme, enhancing customer experiences through data-driven insights. Oracle's VaR of -5.78% and risk score of 65 signify moderate to high risk, whereas its recent revenue growth of +3.9% QoQ demonstrates a positive trend.",
+        "financialHighlights": {
+          "marketCap": 425595404288,
+          "totalRevenue": 61015998464,
+          "netIncome": 15425000448,
+          "totalDebt": 131729997824,
+          "epsDiluted": 5.32
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-05",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001341439&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-04",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001341439&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-09",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001341439&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "INTC",
+        "rationale": "Intel Corporation's AI-focused initiatives, including AI-powered chip development, position it squarely within the theme, as it seeks to regain market share. With a volatility of 88.8% and a VaR of -6.17%, Intel's stock is highly volatile, yet its Sharpe ratio of 0.88 indicates strong risk-adjusted returns.",
+        "financialHighlights": {
+          "marketCap": 220337324032,
+          "totalRevenue": 52852998144,
+          "netIncome": -267000000,
+          "totalDebt": 47109001216,
+          "epsDiluted": -0.06
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-23",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-01-23",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-22",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "rationale": "Advanced Micro Devices contributes to the AI theme through its high-performance computing solutions, enabling faster AI processing and more efficient data analysis. The company's risk score of 62 and Sharpe ratio of 0.95 suggest a relatively strong position, while its QoQ revenue change of +5.6% underscores its growth momentum.",
+        "financialHighlights": {
+          "marketCap": 326326714368,
+          "totalRevenue": 34638999552,
+          "netIncome": 4268999936,
+          "totalDebt": 4006000128,
+          "epsDiluted": 2.6
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-17",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-04",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-03",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "META",
+        "rationale": "Meta Platforms' AI-driven efforts, including AI-powered content moderation and advertising, are central to its business model, fitting squarely within the AI theme. Meta's relatively low risk score of 45 and VaR of -3.22% indicate stability, and its recent QoQ revenue growth of +18.5% is a notable standout.",
+        "financialHighlights": {
+          "marketCap": 1658528202752,
+          "totalRevenue": 200965996544,
+          "netIncome": 60458000384,
+          "totalDebt": 85080997888,
+          "epsDiluted": 23.47
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-01-29",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-28",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-16",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326801&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "NVDA",
+        "rationale": "NVIDIA Corporation's graphics processing units are crucial for AI computing, making it a fundamental component of the AI theme, with applications in gaming, data centers, and autonomous vehicles. The company's Sharpe ratio of 0.79 and low risk score of 42 suggest a favorable investment profile, with a forward P/E of 24.5 indicating reasonable valuations.",
+        "financialHighlights": {
+          "marketCap": 4621547864064,
+          "totalRevenue": 187141996544,
+          "netIncome": 99198001152,
+          "totalDebt": 10821999616,
+          "epsDiluted": 4.04
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-23",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-19",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-19",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "rationale": "Microsoft's AI-powered cloud services and productivity software place it at the forefront of the AI theme, driving digital transformation across industries. Microsoft's volatility of 47.8% and VaR of -2.41% indicate relatively lower risk, while its QoQ revenue growth of +8.1% reflects a steady expansion.",
+        "financialHighlights": {
+          "marketCap": 2952363507712,
+          "totalRevenue": 305453006848,
+          "netIncome": 119262003200,
+          "totalDebt": 123278000128,
+          "epsDiluted": 15.97
+        },
+        "filings": [
+          {
+            "form": "10-Q",
+            "filingDate": "2026-01-28",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-28",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-08",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000789019&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "rationale": "Alphabet's core search business and emerging AI applications, such as Google Assistant and AI-driven advertising, make it a significant player in the AI theme. With a risk score of 16 and a Sharpe ratio of 1.84, Alphabet's stock exhibits low risk and strong risk-adjusted returns, and its recent revenue growth of +10.6% QoQ further reinforces its position.",
+        "financialHighlights": {
+          "marketCap": 3810313371648,
+          "totalRevenue": 402835996672,
+          "netIncome": 132169998336,
+          "totalDebt": 66995998720,
+          "epsDiluted": 10.8
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-13",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-05",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-04",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001652044&type=8-K"
+          }
+        ]
+      }
+    ]
+  },
+  "cybersecurity leaders": {
+    "prompt": "Cybersecurity leaders",
+    "watchlistName": "Cybersecurity Leaders — Moderate Risk",
+    "summary": "The investment thesis for the cybersecurity theme is compelling, driven by the increasing demand for protection against cyber threats and the growing adoption of cloud-based security solutions. Companies like CrowdStrike and Zscaler are well-positioned to benefit from this trend, with CrowdStrike's risk score of 52/100 and Sharpe ratio of 0.12 indicating a relatively attractive risk-return profile. In contrast, SentinelOne's high risk score of 66/100 and negative Sharpe ratio of -0.98 suggest a more volatile investment. The overall portfolio has a medium risk level, with an average risk score of 49.75 and a standard deviation of 7.46, indicating a relatively uniform risk distribution across the basket. The current mid_vol regime and loss probability of 55.28% over the next 30 days highlight the need for careful portfolio management.\n\nThe highest-risk name in the basket is SentinelOne, with a risk score of 66/100, driven by its high volatility of 56.3% over the past 30 days and a negative Sharpe ratio of -0.98. On the other hand, CyberArk Software is the lowest-risk name, with a risk score of 39/100, benefiting from its relatively low volatility of 37.5% and a positive Sharpe ratio of 0.18. The risk scores are relatively clustered, but these two names stand out as outliers. A material change in the outlook for this theme could be triggered by a significant increase in cyber attacks, which would likely drive up demand for security solutions and benefit companies like Palo Alto Networks and Check Point Software, potentially leading to a regime shift and altering the risk-return dynamics of the portfolio.",
+    "insights": [],
+    "keyStats": {
+      "sp500_change": 0.62,
+      "nasdaq_change": 1.08,
+      "dow_change": 0.21,
+      "vix": 17.4
+    },
+    "savedAt": "2026-02-21T19:47:13.737Z",
+    "source": "seed",
+    "reasoning": null,
+    "model": "llama-3.3-70b-versatile",
+    "tickers": [
+      {
+        "symbol": "S",
+        "name": "SentinelOne, Inc.",
+        "sector": "Technology",
+        "price": 12.97,
+        "riskScore": 66,
+        "volatility_30d": 0.5633,
+        "sharpe_ratio": -0.98,
+        "var_95": -0.0477,
+        "cvar_95": -0.0759
+      },
+      {
+        "symbol": "ZS",
+        "name": "Zscaler, Inc.",
+        "sector": "Technology",
+        "price": 159.75,
+        "riskScore": 54,
+        "volatility_30d": 0.528,
+        "sharpe_ratio": -0.27,
+        "var_95": -0.0424,
+        "cvar_95": -0.0696
+      },
+      {
+        "symbol": "CRWD",
+        "name": "CrowdStrike Holdings, Inc.",
+        "sector": "Technology",
+        "price": 388.6,
+        "riskScore": 52,
+        "volatility_30d": 0.5283,
+        "sharpe_ratio": 0.12,
+        "var_95": -0.0422,
+        "cvar_95": -0.061
+      },
+      {
+        "symbol": "PANW",
+        "name": "Palo Alto Networks, Inc.",
+        "sector": "Technology",
+        "price": 148.7,
+        "riskScore": 48,
+        "volatility_30d": 0.4251,
+        "sharpe_ratio": -0.39,
+        "var_95": -0.0414,
+        "cvar_95": -0.0598
+      },
+      {
+        "symbol": "OKTA",
+        "name": "Okta, Inc.",
+        "sector": "Technology",
+        "price": 74.29,
+        "riskScore": 48,
+        "volatility_30d": 0.4768,
+        "sharpe_ratio": -0.13,
+        "var_95": -0.0391,
+        "cvar_95": -0.064
+      },
+      {
+        "symbol": "FTNT",
+        "name": "Fortinet, Inc.",
+        "sector": "Technology",
+        "price": 80,
+        "riskScore": 46,
+        "volatility_30d": 0.3816,
+        "sharpe_ratio": -0.59,
+        "var_95": -0.0371,
+        "cvar_95": -0.0712
+      },
+      {
+        "symbol": "CHKP",
+        "name": "Check Point Software Technologi",
+        "sector": "Technology",
+        "price": 159.04,
+        "riskScore": 45,
+        "volatility_30d": 0.4018,
+        "sharpe_ratio": -0.77,
+        "var_95": -0.0276,
+        "cvar_95": -0.0479
+      },
+      {
+        "symbol": "CYBR",
+        "name": "CyberArk Software Ltd.",
+        "sector": "Technology",
+        "price": 408.85,
+        "riskScore": 39,
+        "volatility_30d": 0.3754,
+        "sharpe_ratio": 0.18,
+        "var_95": -0.037,
+        "cvar_95": -0.0566
+      }
+    ],
+    "tickerExplanations": [
+      {
+        "symbol": "S",
+        "rationale": "SentinelOne's endpoint security platform is a crucial component of the cybersecurity theme, providing real-time threat detection and prevention. With a risk score of 66 and volatility of 56.3%, this stock presents a high-risk investment opportunity, further underscored by its Sharpe ratio of -0.98. Its revenue growth of 12.2% QoQ is a notable standout, despite the company's significant net loss.",
+        "financialHighlights": {
+          "marketCap": 4408100864,
+          "totalRevenue": 955646016,
+          "netIncome": -411291008,
+          "totalDebt": 10343000,
+          "epsDiluted": -1.26
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-14",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001583708&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-12-04",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001583708&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-04",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001583708&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "ZS",
+        "rationale": "Focusing on cloud-based security solutions, Zscaler plays a direct role in the cybersecurity theme by offering a platform for secure internet access. The company's moderate risk profile, with a risk score of 54 and volatility of 52.8%, is accompanied by a Sharpe ratio of -0.27, indicating poor risk-adjusted returns. Zscaler's revenue change of 7.3% QoQ demonstrates a steady growth trajectory.",
+        "financialHighlights": {
+          "marketCap": 25475524608,
+          "totalRevenue": 2833272064,
+          "netIncome": -41042000,
+          "totalDebt": 1836624000,
+          "epsDiluted": -0.26
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-15",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001713683&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-25",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001713683&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-25",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001713683&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "CRWD",
+        "rationale": "CrowdStrike's cloud-delivered endpoint protection is a key player in the cybersecurity space, leveraging artificial intelligence to detect and prevent threats. Notably, CrowdStrike's risk score of 52 and Sharpe ratio of 0.12 suggest a relatively more stable investment compared to its peers, although its VaR of -4.22% indicates potential daily losses. The company's revenue has decreased by 0.8% QoQ, which may be a cause for concern.",
+        "financialHighlights": {
+          "marketCap": 97965449216,
+          "totalRevenue": 4565168128,
+          "netIncome": -314160992,
+          "totalDebt": 818046016,
+          "epsDiluted": -1.28
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-29",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001535527&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-12-03",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001535527&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-02",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001535527&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "PANW",
+        "rationale": "Palo Alto Networks' comprehensive cybersecurity platform, encompassing network, cloud, and endpoint security, solidifies its position in the theme. The company's metrics, including a risk score of 48, volatility of 42.5%, and Sharpe ratio of -0.39, indicate a moderate risk profile with poor risk-adjusted returns. Palo Alto's forward P/E ratio of 37.2 and significant net income of $1.28B are notable, despite a 6.0% QoQ revenue decline.",
+        "financialHighlights": {
+          "marketCap": 120160681984,
+          "totalRevenue": 9893499904,
+          "netIncome": 1281900032,
+          "totalDebt": 459000000,
+          "epsDiluted": 1.58
+        },
+        "filings": [
+          {
+            "form": "10-Q",
+            "filingDate": "2026-02-18",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001327567&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-17",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001327567&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-11",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001327567&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "OKTA",
+        "rationale": "Okta's identity and access management solutions are vital to the cybersecurity ecosystem, enabling secure authentication and authorization. With a risk score of 48 and volatility of 47.7%, Okta presents a moderate risk investment opportunity, and its Sharpe ratio of -0.13 suggests poor risk-adjusted returns. The company's forward P/E ratio of 20.2 and modest revenue growth of 1.2% QoQ are key fundamentals to consider.",
+        "financialHighlights": {
+          "marketCap": 13166433280,
+          "totalRevenue": 2840000000,
+          "netIncome": 195000000,
+          "totalDebt": 423000000,
+          "epsDiluted": 1.1
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-05",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001660134&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-19",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001660134&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-12-03",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001660134&type=10-Q"
+          }
+        ]
+      },
+      {
+        "symbol": "FTNT",
+        "rationale": "Fortinet's broad range of cybersecurity products and services, including firewalls and intrusion prevention systems, contribute significantly to the theme. The company's relatively low risk score of 46, combined with a volatility of 38.2% and Sharpe ratio of -0.59, indicates a more stable investment compared to some of its peers. Fortinet's P/E ratio of 33.1 and substantial net income of $1.85B are notable fundamentals.",
+        "financialHighlights": {
+          "marketCap": 61301284864,
+          "totalRevenue": 6799600128,
+          "netIncome": 1853400064,
+          "totalDebt": 996300032,
+          "epsDiluted": 2.42
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-05",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001262039&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-07",
+            "description": "FORM 10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001262039&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-05",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001262039&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "CHKP",
+        "rationale": "Check Point's suite of cybersecurity solutions, focusing on network, endpoint, and cloud security, makes it a core component of the theme. With a risk score of 45 and volatility of 40.2%, Check Point presents a moderate risk investment opportunity, and its Sharpe ratio of -0.77 suggests poor risk-adjusted returns. The company's forward P/E ratio of 13.8 and significant net income of $1.06B are standouts, demonstrating a stable financial foundation.",
+        "financialHighlights": {
+          "marketCap": 17073693696,
+          "totalRevenue": 2725400064,
+          "netIncome": 1056899968,
+          "totalDebt": 1972099968,
+          "epsDiluted": 9.62
+        },
+        "filings": []
+      },
+      {
+        "symbol": "CYBR",
+        "rationale": "CyberArk's privileged access management solutions are essential to the cybersecurity theme, providing a critical layer of security for sensitive data and systems. The company's low risk score of 39, coupled with a volatility of 37.5% and Sharpe ratio of 0.18, indicates a relatively stable investment with acceptable risk-adjusted returns. CyberArk's revenue and net income metrics, including a net loss of $146.91M, warrant careful consideration.",
+        "financialHighlights": {
+          "marketCap": 20637501440,
+          "totalRevenue": 1361117952,
+          "netIncome": -146911008,
+          "totalDebt": 1222403968,
+          "epsDiluted": -2.94
+        },
+        "filings": []
+      }
+    ]
+  },
+  "semiconductor supply chain": {
+    "prompt": "Semiconductor supply chain",
+    "watchlistName": "Semiconductor Supply Chain — Moderate Risk",
+    "summary": "The semiconductor supply chain investment theme presents a compelling opportunity, driven by the ongoing demand for advanced technologies and the complexities of the global chip supply chain. With a medium risk level and an average risk score of 47.75, the basket offers a balanced mix of high-growth and established players, including Intel Corporation (INTC) and Advanced Micro Devices, Inc. (AMD), which exhibit higher risk scores of 64 and 62, respectively, due to their significant exposure to the volatile semiconductor market. In contrast, companies like Micron Technology, Inc. (MU) and Lam Research Corporation (LRCX) demonstrate more attractive risk-reward profiles, with Sharpe ratios of 2.32 and 2.06, respectively, indicating their potential for strong returns relative to their risk. The current low-volatility regime, with a persistence probability of 0.0082, suggests that the market may be due for a shift, which could impact the portfolio's performance.\n\nThe highest-risk name in the basket is Intel Corporation (INTC), with a risk score of 64, driven by its high 30-day volatility of 88.8% and a VaR95 of -6.17%, indicating a significant potential downside. On the other hand, ASML Holding N.V. (ASML) stands out as the lowest-risk name, with a risk score of 28, benefiting from its relatively low volatility of 35.9% and a favorable Sharpe ratio of 1.72. Notably, the risk scores across the basket are not tightly clustered, allowing for a clear distinction between the higher- and lower-risk names. A key catalyst that could materially change the outlook for this portfolio is a shift in the current low-volatility regime, which could be triggered by changes in the global demand for semiconductors or disruptions to the supply chain, potentially impacting the portfolio's loss probability of 27.34% over the next 30 days.",
+    "insights": [],
+    "keyStats": {
+      "sp500_change": 0.62,
+      "nasdaq_change": 1.08,
+      "dow_change": 0.21,
+      "vix": 17.4
+    },
+    "savedAt": "2026-02-21T19:48:06.038Z",
+    "source": "seed",
+    "reasoning": null,
+    "model": "llama-3.3-70b-versatile",
+    "tickers": [
+      {
+        "symbol": "INTC",
+        "name": "Intel Corporation",
+        "sector": "Technology",
+        "price": 44.11,
+        "riskScore": 64,
+        "volatility_30d": 0.8881,
+        "sharpe_ratio": 0.88,
+        "var_95": -0.0617,
+        "cvar_95": -0.0849
+      },
+      {
+        "symbol": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
+        "sector": "Technology",
+        "price": 200.15,
+        "riskScore": 62,
+        "volatility_30d": 0.8197,
+        "sharpe_ratio": 0.95,
+        "var_95": -0.0552,
+        "cvar_95": -0.0843
+      },
+      {
+        "symbol": "MU",
+        "name": "Micron Technology, Inc.",
+        "sector": "Technology",
+        "price": 428.17,
+        "riskScore": 51,
+        "volatility_30d": 0.7117,
+        "sharpe_ratio": 2.32,
+        "var_95": -0.0529,
+        "cvar_95": -0.0892
+      },
+      {
+        "symbol": "LRCX",
+        "name": "Lam Research Corporation",
+        "sector": "Technology",
+        "price": 244.92,
+        "riskScore": 50,
+        "volatility_30d": 0.6276,
+        "sharpe_ratio": 2.06,
+        "var_95": -0.0507,
+        "cvar_95": -0.0732
+      },
+      {
+        "symbol": "AMAT",
+        "name": "Applied Materials, Inc.",
+        "sector": "Technology",
+        "price": 375.38,
+        "riskScore": 45,
+        "volatility_30d": 0.559,
+        "sharpe_ratio": 1.68,
+        "var_95": -0.0452,
+        "cvar_95": -0.0697
+      },
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "sector": "Technology",
+        "price": 189.82,
+        "riskScore": 42,
+        "volatility_30d": 0.3815,
+        "sharpe_ratio": 0.79,
+        "var_95": -0.0428,
+        "cvar_95": -0.0635
+      },
+      {
+        "symbol": "TXN",
+        "name": "Texas Instruments Incorporated",
+        "sector": "Technology",
+        "price": 219.73,
+        "riskScore": 40,
+        "volatility_30d": 0.4044,
+        "sharpe_ratio": 0.28,
+        "var_95": -0.0348,
+        "cvar_95": -0.062
+      },
+      {
+        "symbol": "ASML",
+        "name": "ASML Holding N.V. - New York Re",
+        "sector": "Technology",
+        "price": 1469.59,
+        "riskScore": 28,
+        "volatility_30d": 0.3593,
+        "sharpe_ratio": 1.72,
+        "var_95": -0.0365,
+        "cvar_95": -0.0573
+      }
+    ],
+    "tickerExplanations": [
+      {
+        "symbol": "INTC",
+        "rationale": "Intel Corporation plays a crucial role in the semiconductor supply chain as a leading manufacturer of microprocessors and other semiconductor products. With a risk score of 64 and volatility of 88.8%, Intel's stock exhibits high risk characteristics, while its Sharpe ratio of 0.88 indicates acceptable risk-adjusted returns. Its revenue change of +3.5% QoQ is a notable trend.",
+        "financialHighlights": {
+          "marketCap": 220337324032,
+          "totalRevenue": 52852998144,
+          "netIncome": -267000000,
+          "totalDebt": 47109001216,
+          "epsDiluted": -0.06
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-23",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-01-23",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-22",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000050863&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "rationale": "Advanced Micro Devices is a key player in the semiconductor supply chain, specializing in high-performance computing and graphics solutions. AMD's stock has a moderate risk score of 62, a high volatility of 82.0%, and a strong Sharpe ratio of 0.95, indicating robust risk-adjusted returns. The company's forward P/E of 18.8 is also a fundamental standout.",
+        "financialHighlights": {
+          "marketCap": 326326714368,
+          "totalRevenue": 34638999552,
+          "netIncome": 4268999936,
+          "totalDebt": 4006000128,
+          "epsDiluted": 2.6
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-17",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-04",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-03",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000002488&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "MU",
+        "rationale": "Micron Technology's position in the semiconductor supply chain is centered around its memory and storage products, making it a vital component supplier. Micron's risk score of 51 and volatility of 71.2% suggest moderate risk, while its Sharpe ratio of 2.32 indicates strong risk-adjusted returns. The company's revenue change of -4.2% QoQ is a notable trend to monitor.",
+        "financialHighlights": {
+          "marketCap": 481909309440,
+          "totalRevenue": 42311999488,
+          "netIncome": 11909000192,
+          "totalDebt": 12492999680,
+          "epsDiluted": 10.53
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-21",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-12-18",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-17",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000723125&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "LRCX",
+        "rationale": "Lam Research Corporation's business model, focused on semiconductor equipment and services, directly supports the production of chips, making it an integral part of the supply chain. With a risk score of 50, a volatility of 62.8%, and a strong Sharpe ratio of 2.06, Lam Research's stock exhibits moderate risk and robust returns. Its forward P/E of 35.6 is a notable fundamental metric.",
+        "financialHighlights": {
+          "marketCap": 307626868736,
+          "totalRevenue": 20560531456,
+          "netIncome": 6213408768,
+          "totalDebt": 4483747840,
+          "epsDiluted": 4.87
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-03",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000707549&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2026-01-29",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000707549&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-28",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000707549&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "AMAT",
+        "rationale": "Applied Materials, as a leading provider of semiconductor manufacturing equipment, plays a direct role in enabling the production of advanced chips. Applied Materials' stock has a risk score of 45, a volatility of 55.9%, and a Sharpe ratio of 1.68, indicating moderate risk and strong risk-adjusted returns. The company's P/E of 38.5 is a fundamental standout.",
+        "financialHighlights": {
+          "marketCap": 297947168768,
+          "totalRevenue": 28213999616,
+          "netIncome": 7839000064,
+          "totalDebt": 7190000128,
+          "epsDiluted": 9.76
+        },
+        "filings": [
+          {
+            "form": "10-Q",
+            "filingDate": "2026-02-19",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000006951&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-12",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000006951&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-12",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000006951&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "NVDA",
+        "rationale": "NVIDIA Corporation's graphics processing units and high-performance computing solutions make it a critical component supplier in the semiconductor supply chain. NVIDIA's stock exhibits moderate risk with a risk score of 42 and a volatility of 38.1%, while its Sharpe ratio of 0.79 indicates acceptable risk-adjusted returns. The company's revenue change of +17.6% QoQ is a notable trend.",
+        "financialHighlights": {
+          "marketCap": 4621547864064,
+          "totalRevenue": 187141996544,
+          "netIncome": 99198001152,
+          "totalDebt": 10821999616,
+          "epsDiluted": 4.04
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-23",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-19",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-19",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "TXN",
+        "rationale": "Texas Instruments Incorporated, with its analog and embedded processing products, contributes significantly to the semiconductor supply chain. Texas Instruments' stock has a risk score of 40, a volatility of 40.4%, and a Sharpe ratio of 0.28, indicating moderate risk but poor risk-adjusted returns. The company's P/E of 40.3 is a notable fundamental metric.",
+        "financialHighlights": {
+          "marketCap": 199651737600,
+          "totalRevenue": 17681999872,
+          "netIncome": 4973000192,
+          "totalDebt": 14778999808,
+          "epsDiluted": 5.45
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-06",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000097476&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-06",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000097476&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-04",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000097476&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "ASML",
+        "rationale": "ASML Holding N.V.'s position as a leading manufacturer of lithography systems for the semiconductor industry makes it a crucial part of the supply chain. With a low risk score of 28, a volatility of 35.9%, and a strong Sharpe ratio of 1.72, ASML's stock exhibits low risk and robust risk-adjusted returns. The company's revenue change of +27.9% QoQ is a significant trend.",
+        "financialHighlights": {
+          "marketCap": 570417938432,
+          "totalRevenue": 32667299840,
+          "netIncome": 9609400320,
+          "totalDebt": 2708999936,
+          "epsDiluted": 29.39
+        },
+        "filings": []
+      }
+    ]
+  },
+  "defensive healthcare": {
+    "prompt": "Defensive healthcare",
+    "watchlistName": "Defensive Healthcare — Lower Risk",
+    "summary": "The defensive investment theme is compelling in the current market environment, with a basket of pharmaceutical stocks including LLY, ABT, AMGN, PFE, BMY, GILD, MRK, and JNJ. The average risk score of 28.5, with a standard deviation of 13.16, suggests a relatively low-risk portfolio, which is in line with the defensive strategy. Notably, JNJ stands out with a risk score of 5, the lowest in the basket, and a Sharpe ratio of 2.23, indicating a strong risk-adjusted return profile. On the other hand, stocks like LLY, with a risk score of 49 and a VaR95 of -3.71%, exhibit higher volatility, which may be a concern. The current high-volatility regime, with a persistence probability of 0.0, suggests that the market may be due for a shift, and the loss probability of 36.14% over the next 30 days warrants careful consideration. The Sharpe ratios for the basket range from -0.70 for ABT to 2.23 for JNJ, with an average of 0.83, indicating a mixed bag of risk-adjusted returns.\n\nThe highest-risk name in the basket is LLY, with a risk score of 49, more than 1.7 standard deviations above the mean, driven by its high volatility and relatively low Sharpe ratio. In contrast, the lowest-risk name is JNJ, with a risk score of 5, which is more than 1.8 standard deviations below the mean, driven by its low volatility and high Sharpe ratio. The risk scores are not tightly clustered, with a clear distinction between the higher-risk and lower-risk names. A specific catalyst that would materially change the outlook for this basket is a shift in the regulatory environment, particularly with regards to drug pricing, which could impact the profitability of these pharmaceutical companies. For example, if the current administration were to implement price controls, it could negatively impact the stock prices of companies like PFE and MRK, which have significant exposure to government reimbursement programs. Conversely, a relaxation of regulatory oversight could boost the stock prices of companies like GILD and AMGN, which have significant pipeline potential.",
+    "insights": [],
+    "keyStats": {
+      "sp500_change": 0.62,
+      "nasdaq_change": 1.08,
+      "dow_change": 0.21,
+      "vix": 17.4
+    },
+    "savedAt": "2026-02-21T19:51:19.151Z",
+    "source": "seed",
+    "reasoning": null,
+    "model": "llama-3.3-70b-versatile",
+    "tickers": [
+      {
+        "symbol": "LLY",
+        "name": "Eli Lilly and Company",
+        "sector": "Healthcare",
+        "price": 1009.52,
+        "riskScore": 49,
+        "volatility_30d": 0.5258,
+        "sharpe_ratio": 0.36,
+        "var_95": -0.0371,
+        "cvar_95": -0.0644
+      },
+      {
+        "symbol": "ABT",
+        "name": "Abbott Laboratories",
+        "sector": "Healthcare",
+        "price": 112.21,
+        "riskScore": 42,
+        "volatility_30d": 0.418,
+        "sharpe_ratio": -0.7,
+        "var_95": -0.02,
+        "cvar_95": -0.0387
+      },
+      {
+        "symbol": "AMGN",
+        "name": "Amgen Inc.",
+        "sector": "Healthcare",
+        "price": 374.75,
+        "riskScore": 36,
+        "volatility_30d": 0.378,
+        "sharpe_ratio": 0.85,
+        "var_95": -0.0281,
+        "cvar_95": -0.038
+      },
+      {
+        "symbol": "PFE",
+        "name": "Pfizer, Inc.",
+        "sector": "Healthcare",
+        "price": 26.65,
+        "riskScore": 29,
+        "volatility_30d": 0.2766,
+        "sharpe_ratio": 0.32,
+        "var_95": -0.0289,
+        "cvar_95": -0.037
+      },
+      {
+        "symbol": "BMY",
+        "name": "Bristol-Myers Squibb Company",
+        "sector": "Healthcare",
+        "price": 60.66,
+        "riskScore": 28,
+        "volatility_30d": 0.2575,
+        "sharpe_ratio": 0.46,
+        "var_95": -0.0293,
+        "cvar_95": -0.0414
+      },
+      {
+        "symbol": "GILD",
+        "name": "Gilead Sciences, Inc.",
+        "sector": "Healthcare",
+        "price": 151.4,
+        "riskScore": 22,
+        "volatility_30d": 0.3245,
+        "sharpe_ratio": 1.23,
+        "var_95": -0.0275,
+        "cvar_95": -0.0345
+      },
+      {
+        "symbol": "MRK",
+        "name": "Merck & Company, Inc.",
+        "sector": "Healthcare",
+        "price": 122.26,
+        "riskScore": 17,
+        "volatility_30d": 0.2443,
+        "sharpe_ratio": 1.21,
+        "var_95": -0.0279,
+        "cvar_95": -0.0418
+      },
+      {
+        "symbol": "JNJ",
+        "name": "Johnson & Johnson",
+        "sector": "Healthcare",
+        "price": 242.49,
+        "riskScore": 5,
+        "volatility_30d": 0.1342,
+        "sharpe_ratio": 2.23,
+        "var_95": -0.0152,
+        "cvar_95": -0.026
+      }
+    ],
+    "tickerExplanations": [
+      {
+        "symbol": "LLY",
+        "rationale": "Eli Lilly and Company's diversified portfolio of pharmaceutical products positions it as a stalwart in the defensive theme, providing essential healthcare solutions that tend to be less volatile in economic downturns. With a moderate risk score of 49 and elevated volatility of 52.6%, the company's Sharpe ratio of 0.36 indicates acceptable risk-adjusted returns. Its revenue change of +12.1% QoQ is a notable standout, demonstrating strong growth momentum.",
+        "financialHighlights": {
+          "marketCap": 952338219008,
+          "totalRevenue": 65179000832,
+          "netIncome": 20640000000,
+          "totalDebt": 43865001984,
+          "epsDiluted": 22.92
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-12",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000059478&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-04",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000059478&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-21",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000059478&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "ABT",
+        "rationale": "Abbott Laboratories' stable cash flows from its medical devices and nutritionals businesses contribute to its defensive characteristics, making it an attractive investment during uncertain times. The company's VaR of -2.00% and Sharpe ratio of -0.70 suggest a moderate risk profile with poor risk-adjusted returns. Its forward P/E of 18.0 is relatively low compared to its peers.",
+        "financialHighlights": {
+          "marketCap": 195296903168,
+          "totalRevenue": 44328001536,
+          "netIncome": 6524000256,
+          "totalDebt": 12974999552,
+          "epsDiluted": 3.73
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-20",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000001800&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-20",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000001800&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-22",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000001800&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "AMGN",
+        "rationale": "As a biotechnology company with a focus on developing innovative medicines, Amgen Inc. plays a critical role in the healthcare sector, which is often considered defensive due to its relatively stable demand. Amgen's risk score of 36 and volatility of 37.8% indicate a moderate risk profile, while its Sharpe ratio of 0.85 suggests strong risk-adjusted returns. The company's revenue decline of -3.4% QoQ is a concern that warrants closer monitoring.",
+        "financialHighlights": {
+          "marketCap": 202015604736,
+          "totalRevenue": 36750999552,
+          "netIncome": 7711000064,
+          "totalDebt": 55435001856,
+          "epsDiluted": 14.24
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-19",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000318154&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-13",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000318154&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-03",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000318154&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "PFE",
+        "rationale": "Pfizer, Inc.'s extensive portfolio of prescription medications and vaccines underpins its status as a defensive stock, as these products are typically less sensitive to economic fluctuations. With a low risk score of 29 and moderate volatility of 27.7%, Pfizer's Sharpe ratio of 0.32 indicates acceptable risk-adjusted returns. Its forward P/E of 9.4 is relatively low, making it an attractive value investment.",
+        "financialHighlights": {
+          "marketCap": 151524114432,
+          "totalRevenue": 62578999296,
+          "netIncome": 7745999872,
+          "totalDebt": 61937999872,
+          "epsDiluted": 1.36
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-03",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000078003&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-16",
+            "description": "PFIZER 8-K DECEMBER 16, 2025",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000078003&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-21",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000078003&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "BMY",
+        "rationale": "Bristol-Myers Squibb Company's pharmaceutical products, particularly in the areas of oncology and immunology, contribute to its defensive profile, given the consistent demand for these treatments. The company's risk score of 28 and volatility of 25.8% suggest a low-risk profile, while its Sharpe ratio of 0.46 indicates acceptable risk-adjusted returns. Its revenue growth of +21.2% QoQ is a notable highlight, driven by the success of its key products.",
+        "financialHighlights": {
+          "marketCap": 123532492800,
+          "totalRevenue": 48193998848,
+          "netIncome": 7054000128,
+          "totalDebt": 47187001344,
+          "epsDiluted": 3.46
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-11",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000014272&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-05",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000014272&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-12",
+            "description": "CURRENT REPORT",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000014272&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "GILD",
+        "rationale": "Gilead Sciences, Inc.'s focus on developing and commercializing therapies for life-threatening diseases makes it a critical player in the healthcare sector, which is often sought after by investors seeking defensive stocks. With a low risk score of 22 and moderate volatility of 32.5%, Gilead's Sharpe ratio of 1.23 indicates strong risk-adjusted returns. Its P/E of 22.3 is relatively in line with its peers, reflecting its stable earnings profile.",
+        "financialHighlights": {
+          "marketCap": 187838889984,
+          "totalRevenue": 29443000320,
+          "netIncome": 8510000128,
+          "totalDebt": 24591998976,
+          "epsDiluted": 6.78
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-10",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000882095&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-19",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000882095&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-07",
+            "description": "FORM 10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000882095&type=10-Q"
+          }
+        ]
+      },
+      {
+        "symbol": "MRK",
+        "rationale": "Merck & Company, Inc.'s diversified portfolio of pharmaceutical and animal health products supports its defensive characteristics, as these businesses tend to be less cyclical. The company's risk score of 17 and volatility of 24.4% indicate a low-risk profile, while its Sharpe ratio of 1.21 suggests strong risk-adjusted returns. Its forward P/E of 12.5 is relatively low, making it an attractive investment opportunity.",
+        "financialHighlights": {
+          "marketCap": 305378983936,
+          "totalRevenue": 65010999296,
+          "netIncome": 18254000128,
+          "totalDebt": 41373999104,
+          "epsDiluted": 7.27
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-03",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000310158&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-04",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000310158&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-05",
+            "description": "3Q25 FORM 10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000310158&type=10-Q"
+          }
+        ]
+      },
+      {
+        "symbol": "JNJ",
+        "rationale": "Johnson & Johnson's broad range of healthcare products, including pharmaceuticals, medical devices, and consumer goods, underpins its status as a defensive stock, given the consistent demand for these essential products. With a low risk score of 5 and low volatility of 13.4%, Johnson & Johnson's Sharpe ratio of 2.23 indicates strong risk-adjusted returns. Its revenue growth of +9.1% QoQ is a notable highlight, driven by the strength of its diversified business portfolio.",
+        "financialHighlights": {
+          "marketCap": 584376451072,
+          "totalRevenue": 94193000448,
+          "netIncome": 26804000768,
+          "totalDebt": 49332998144,
+          "epsDiluted": 11.03
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-11",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000200406&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-21",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000200406&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-10-22",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000200406&type=10-Q"
+          }
+        ]
+      }
+    ]
+  },
+  "energy transition winners": {
+    "prompt": "Energy transition winners",
+    "watchlistName": "Energy Transition Winners — Lower Risk",
+    "summary": "The investment thesis for the \"sustainability\" theme is compelling, driven by the growing demand for renewable energy sources and reducing carbon footprint. The basket of stocks, including NRG, EXC, PEG, D, ED, DUK, EIX, and NEE, offers a diversified play on this trend. Notably, companies like NEE and DUK have demonstrated strong Sharpe ratios of 1.08 and 0.78, respectively, indicating attractive risk-adjusted returns. The average risk score of 21.875 for the basket suggests a medium risk level, with a relatively uniform distribution of risk scores across the tickers. The current regime is characterized as \"mid_vol\" with a low persistence probability, implying a potential shift in volatility. The loss probability of 30.92% over the next 30 days is a key consideration, but the overall quant signals, including a VaR95 of -2.43% for NEE, suggest that the basket can navigate potential downsides.\n\nThe highest-risk name in the basket is NRG, with a risk score of 37, driven by its high volatility of 42.3% over the past 30 days. In contrast, the lowest-risk name is NEE, with a risk score of 12, benefiting from its relatively low volatility of 18.9% and attractive Sharpe ratio of 1.08. The risk scores are relatively clustered, but NRG stands out as a higher-risk outlier. A specific catalyst that would materially change the outlook for this basket is a significant policy shift or regulatory announcement that impacts the renewable energy sector, such as an extension of tax credits for solar and wind energy. This could lead to a revaluation of the stocks in the basket, particularly those with high exposure to renewable energy sources, such as NEE and DUK.",
+    "insights": [],
+    "keyStats": {
+      "sp500_change": 0.62,
+      "nasdaq_change": 1.08,
+      "dow_change": 0.21,
+      "vix": 17.4
+    },
+    "savedAt": "2026-02-21T19:51:43.690Z",
+    "source": "seed",
+    "reasoning": null,
+    "model": "llama-3.3-70b-versatile",
+    "tickers": [
+      {
+        "symbol": "NRG",
+        "name": "NRG Energy, Inc.",
+        "sector": "Utilities",
+        "price": 179.18,
+        "riskScore": 37,
+        "volatility_30d": 0.4233,
+        "sharpe_ratio": 1.02,
+        "var_95": -0.0486,
+        "cvar_95": -0.0739
+      },
+      {
+        "symbol": "EXC",
+        "name": "Exelon Corporation",
+        "sector": "Utilities",
+        "price": 47.79,
+        "riskScore": 26,
+        "volatility_30d": 0.2937,
+        "sharpe_ratio": 0.69,
+        "var_95": -0.0181,
+        "cvar_95": -0.0235
+      },
+      {
+        "symbol": "PEG",
+        "name": "Public Service Enterprise Group",
+        "sector": "Utilities",
+        "price": 85.57,
+        "riskScore": 24,
+        "volatility_30d": 0.2349,
+        "sharpe_ratio": 0.25,
+        "var_95": -0.0227,
+        "cvar_95": -0.0297
+      },
+      {
+        "symbol": "D",
+        "name": "Dominion Energy, Inc.",
+        "sector": "Utilities",
+        "price": 65.96,
+        "riskScore": 21,
+        "volatility_30d": 0.195,
+        "sharpe_ratio": 0.86,
+        "var_95": -0.0218,
+        "cvar_95": -0.0326
+      },
+      {
+        "symbol": "ED",
+        "name": "Consolidated Edison, Inc.",
+        "sector": "Utilities",
+        "price": 109.81,
+        "riskScore": 19,
+        "volatility_30d": 0.1768,
+        "sharpe_ratio": 0.76,
+        "var_95": -0.0194,
+        "cvar_95": -0.0268
+      },
+      {
+        "symbol": "DUK",
+        "name": "Duke Energy Corporation (Holdin",
+        "sector": "Utilities",
+        "price": 126.78,
+        "riskScore": 18,
+        "volatility_30d": 0.1807,
+        "sharpe_ratio": 0.78,
+        "var_95": -0.0154,
+        "cvar_95": -0.0225
+      },
+      {
+        "symbol": "EIX",
+        "name": "Edison International",
+        "sector": "Utilities",
+        "price": 73.74,
+        "riskScore": 18,
+        "volatility_30d": 0.2811,
+        "sharpe_ratio": 1.38,
+        "var_95": -0.025,
+        "cvar_95": -0.0443
+      },
+      {
+        "symbol": "NEE",
+        "name": "NextEra Energy, Inc.",
+        "sector": "Utilities",
+        "price": 92.18,
+        "riskScore": 12,
+        "volatility_30d": 0.1894,
+        "sharpe_ratio": 1.08,
+        "var_95": -0.0243,
+        "cvar_95": -0.039
+      }
+    ],
+    "tickerExplanations": [
+      {
+        "symbol": "NRG",
+        "rationale": "NRG Energy's business model, focused on renewable energy and reducing carbon emissions, aligns directly with the sustainability theme. The company's moderate risk score of 37 and elevated volatility of 42.3% are quantitatively notable. Its strong revenue growth trend, with an 11.0% increase quarter-over-quarter, is a fundamental standout.",
+        "financialHighlights": {
+          "marketCap": 38683062272,
+          "totalRevenue": 29778999296,
+          "netIncome": 1374000000,
+          "totalDebt": 12117000192,
+          "epsDiluted": 6.68
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-04",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001013871&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-02",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001013871&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-30",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001013871&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "EXC",
+        "rationale": "Exelon Corporation plays a crucial role in the sustainability theme through its investments in clean energy and energy efficiency programs. With a low risk score of 26 and moderate volatility of 29.4%, the company's metrics are characterized by a relatively stable profile, albeit with a poor Sharpe ratio of 0.69. Its forward P/E of 15.7 is also notable.",
+        "financialHighlights": {
+          "marketCap": 48884039680,
+          "totalRevenue": 24258000896,
+          "netIncome": 2768000000,
+          "totalDebt": 50248998912,
+          "epsDiluted": 2.73
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-20",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001109357&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-12",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001109357&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-12",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001109357&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "PEG",
+        "rationale": "Public Service Enterprise Group's commitment to sustainability is evident in its efforts to reduce greenhouse gas emissions and promote renewable energy sources. The company's low risk score of 24 and moderate volatility of 23.5% are quantitatively significant, with a VaR of -2.27% indicating relatively low potential daily loss. Its strong quarterly revenue growth of 23.0% is a notable fundamental trend.",
+        "financialHighlights": {
+          "marketCap": 42712604672,
+          "totalRevenue": 11717999616,
+          "netIncome": 2082000000,
+          "totalDebt": 23508000768,
+          "epsDiluted": 4.16
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-21",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000788784&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-11-03",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000788784&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-03",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000788784&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "D",
+        "rationale": "Dominion Energy's diversified portfolio of renewable energy projects and its goal to achieve net-zero emissions by 2050 make it a key player in the sustainability theme. The company's low risk score of 21, moderate volatility of 19.5%, and acceptable Sharpe ratio of 0.86 are quantitatively notable. Its quarterly revenue growth of 20.0% is also a positive fundamental signal.",
+        "financialHighlights": {
+          "marketCap": 56324120576,
+          "totalRevenue": 15813000192,
+          "netIncome": 2609999872,
+          "totalDebt": 48958001152,
+          "epsDiluted": 3.06
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-03",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000715957&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-30",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000715957&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-20",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000715957&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "ED",
+        "rationale": "Consolidated Edison's investments in energy efficiency and renewable energy align with the sustainability theme, and its low risk profile makes it an attractive option. With a risk score of 19, low volatility of 17.7%, and a VaR of -1.94%, the company's metrics indicate stability, and its quarterly revenue growth of 14.3% is a notable fundamental trend. Its forward P/E of 17.1 is relatively low.",
+        "financialHighlights": {
+          "marketCap": 39634337792,
+          "totalRevenue": 16917999616,
+          "netIncome": 2023000064,
+          "totalDebt": 28376000512,
+          "epsDiluted": 5.72
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-19",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001047862&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-19",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001047862&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-24",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001047862&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "DUK",
+        "rationale": "Duke Energy's comprehensive sustainability strategy, including investments in renewable energy and energy storage, positions it as a leader in the theme. The company's low risk score of 18, moderate volatility of 18.1%, and acceptable Sharpe ratio of 0.78 are quantitatively significant, with a VaR of -1.54% indicating relatively low potential daily loss. Its large market capitalization of $98.59B also lends stability.",
+        "financialHighlights": {
+          "marketCap": 98591891456,
+          "totalRevenue": 32237000704,
+          "netIncome": 4911000064,
+          "totalDebt": 90868998144,
+          "epsDiluted": 6.31
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-18",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326160&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-10",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326160&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-12",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326160&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "EIX",
+        "rationale": "Edison International's focus on reducing carbon emissions and promoting energy efficiency makes it a strong fit for the sustainability theme. With a low risk score of 18 and moderate volatility of 28.1%, the company's metrics are notable, and its strong Sharpe ratio of 1.38 indicates a favorable risk-adjusted return. Its low forward P/E of 11.3 is also attractive.",
+        "financialHighlights": {
+          "marketCap": 28377659392,
+          "totalRevenue": 19317000192,
+          "netIncome": 4456999936,
+          "totalDebt": 41549000704,
+          "epsDiluted": 7.63
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-19",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000827052&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-18",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000827052&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-18",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000827052&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "NEE",
+        "rationale": "NextEra Energy's commitment to sustainability is evident in its significant investments in renewable energy and its goal to reduce greenhouse gas emissions. The company's very low risk score of 12, moderate volatility of 18.9%, and strong Sharpe ratio of 1.08 are quantitatively notable, with a VaR of -2.43% indicating relatively low potential daily loss. Its large market capitalization of $192.06B and strong revenue base of $27.41B also lend stability.",
+        "financialHighlights": {
+          "marketCap": 192059047936,
+          "totalRevenue": 27412000768,
+          "netIncome": 6834999808,
+          "totalDebt": 97220001792,
+          "epsDiluted": 3.3
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-13",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000753308&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-10",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000753308&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-05",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000753308&type=8-K"
+          }
+        ]
+      }
+    ]
+  },
+  "cash-flow compounders": {
+    "prompt": "Cash-flow compounders",
+    "watchlistName": "Cash-Flow Compounders — Lower Risk",
+    "summary": "The investment thesis for the \"cash flow compounders\" basket is centered around the idea that these stocks, which include KMB, PEP, CL, CHD, PG, KO, MO, and JNJ, offer a unique combination of stable cash flows and growth potential. With an average risk score of 20.5, this basket is characterized as low-risk, and the risk scores are relatively uniform across the board, with a standard deviation of 7.18. Notably, the Sharpe ratios for these stocks are mixed, with KO and MO standing out with ratios of 0.84 and 1.28, respectively, indicating relatively strong risk-adjusted returns. In contrast, KMB's Sharpe ratio of -0.84 suggests that its returns have been negatively impacted by volatility. The current high-volatility regime, as indicated by the regime analysis, may pose a challenge to these stocks, but their historical ability to generate consistent cash flows should help mitigate this risk. The loss probability of 40.56% over the next 30 days is a consideration, but the overall quant signals suggest that this basket is well-positioned for long-term growth.\n\nThe highest-risk name in the basket is KMB, with a risk score of 29, driven in part by its high volatility and negative Sharpe ratio. On the other hand, JNJ stands out as the lowest-risk name, with a risk score of just 5, thanks to its low volatility and strong Sharpe ratio. The risk scores are relatively tightly clustered, but these two stocks are clear outliers. A key risk factor to watch is the high volatility of MO, which could potentially lead to significant losses if the market experiences a downturn. A specific catalyst that would materially change the outlook for this basket is a shift in the current high-volatility regime, which could be triggered by a change in interest rates or a significant economic event. If the regime were to shift to a lower-volatility environment, the cash flow compounders basket could potentially benefit, with stocks like KO and PG likely to outperform.",
+    "insights": [],
+    "keyStats": {
+      "sp500_change": 0.62,
+      "nasdaq_change": 1.08,
+      "dow_change": 0.21,
+      "vix": 17.4
+    },
+    "savedAt": "2026-02-21T19:52:07.088Z",
+    "source": "seed",
+    "reasoning": null,
+    "model": "llama-3.3-70b-versatile",
+    "tickers": [
+      {
+        "symbol": "KMB",
+        "name": "Kimberly-Clark Corporation",
+        "sector": "Consumer Defensive",
+        "price": 109.02,
+        "riskScore": 29,
+        "volatility_30d": 0.1928,
+        "sharpe_ratio": -0.84,
+        "var_95": -0.0208,
+        "cvar_95": -0.0383
+      },
+      {
+        "symbol": "PEP",
+        "name": "Pepsico, Inc.",
+        "sector": "Consumer Defensive",
+        "price": 164.94,
+        "riskScore": 27,
+        "volatility_30d": 0.2778,
+        "sharpe_ratio": 0.49,
+        "var_95": -0.0233,
+        "cvar_95": -0.0295
+      },
+      {
+        "symbol": "CL",
+        "name": "Colgate-Palmolive Company",
+        "sector": "Consumer Defensive",
+        "price": 95.09,
+        "riskScore": 25,
+        "volatility_30d": 0.2495,
+        "sharpe_ratio": 0.4,
+        "var_95": -0.022,
+        "cvar_95": -0.029
+      },
+      {
+        "symbol": "CHD",
+        "name": "Church & Dwight Company, Inc.",
+        "sector": "Consumer Defensive",
+        "price": 103.08,
+        "riskScore": 24,
+        "volatility_30d": 0.2379,
+        "sharpe_ratio": -0.04,
+        "var_95": -0.0209,
+        "cvar_95": -0.0328
+      },
+      {
+        "symbol": "PG",
+        "name": "Procter & Gamble Company (The)",
+        "sector": "Consumer Defensive",
+        "price": 160.78,
+        "riskScore": 20,
+        "volatility_30d": 0.1718,
+        "sharpe_ratio": -0.16,
+        "var_95": -0.018,
+        "cvar_95": -0.0266
+      },
+      {
+        "symbol": "KO",
+        "name": "Coca-Cola Company (The)",
+        "sector": "Consumer Defensive",
+        "price": 79.84,
+        "riskScore": 17,
+        "volatility_30d": 0.173,
+        "sharpe_ratio": 0.84,
+        "var_95": -0.015,
+        "cvar_95": -0.021
+      },
+      {
+        "symbol": "MO",
+        "name": "Altria Group, Inc.",
+        "sector": "Consumer Defensive",
+        "price": 67.57,
+        "riskScore": 17,
+        "volatility_30d": 0.3029,
+        "sharpe_ratio": 1.28,
+        "var_95": -0.0188,
+        "cvar_95": -0.0323
+      },
+      {
+        "symbol": "JNJ",
+        "name": "Johnson & Johnson",
+        "sector": "Healthcare",
+        "price": 242.49,
+        "riskScore": 5,
+        "volatility_30d": 0.1342,
+        "sharpe_ratio": 2.23,
+        "var_95": -0.0152,
+        "cvar_95": -0.026
+      }
+    ],
+    "tickerExplanations": [
+      {
+        "symbol": "KMB",
+        "rationale": "Kimberly-Clark Corporation's stable consumer defensive business model generates consistent cash flows, making it a suitable fit for the cash flow compounders theme. With a risk score of 29 and volatility of 19.3%, the stock's risk profile is moderate, while its Sharpe ratio of -0.84 indicates poor risk-adjusted returns. Its forward P/E of 14.2 is relatively low, indicating potential undervaluation.",
+        "financialHighlights": {
+          "marketCap": 36186173440,
+          "totalRevenue": 16446999552,
+          "netIncome": 1620999936,
+          "totalDebt": 7576000000,
+          "epsDiluted": 4.86
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-12",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000055785&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-29",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000055785&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-27",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000055785&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "PEP",
+        "rationale": "Pepsico's diversified portfolio of consumer staples contributes to its robust cash flow generation, aligning with the theme's objectives. The company's Sharpe ratio of 0.49 and moderate volatility of 27.8% suggest acceptable risk-adjusted returns, and its recent revenue growth of 23.5% QoQ is a notable standout.",
+        "financialHighlights": {
+          "marketCap": 225529085952,
+          "totalRevenue": 93924999168,
+          "netIncome": 8240000000,
+          "totalDebt": 53027999744,
+          "epsDiluted": 6
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-11",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000077476&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-03",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000077476&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-03",
+            "description": "FORM 10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000077476&type=10-K"
+          }
+        ]
+      },
+      {
+        "symbol": "CL",
+        "rationale": "Colgate-Palmolive's cash flow compounding capabilities are driven by its strong brand presence in the consumer defensive sector, ensuring a steady stream of income. Characterized by a low-risk score of 25 and moderate volatility of 24.9%, the stock's risk profile is relatively stable, with a Sharpe ratio of 0.40 indicating acceptable risk-adjusted returns.",
+        "financialHighlights": {
+          "marketCap": 76853714944,
+          "totalRevenue": 20381999104,
+          "netIncome": 2132000000,
+          "totalDebt": 7987999744,
+          "epsDiluted": 2.63
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-30",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021665&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-11-10",
+            "description": "FORM 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021665&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-10-31",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021665&type=10-Q"
+          }
+        ]
+      },
+      {
+        "symbol": "CHD",
+        "rationale": "Church & Dwight's consumer defensive business model, featuring a portfolio of well-known brands, enables the company to compound cash flows over time, making it a suitable fit for the theme. With a risk score of 24 and volatility of 23.8%, the stock's risk profile is moderate, while its recent revenue growth of 2.2% QoQ is a positive sign.",
+        "financialHighlights": {
+          "marketCap": 24752609280,
+          "totalRevenue": 6203200000,
+          "netIncome": 736800000,
+          "totalDebt": 2382000128,
+          "epsDiluted": 3.02
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-12",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000313927&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-30",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000313927&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-09",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000313927&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "PG",
+        "rationale": "The Procter & Gamble Company's extensive portfolio of consumer staples generates substantial cash flows, which can be reinvested to drive long-term growth, aligning with the cash flow compounders theme. The company's low risk score of 20 and volatility of 17.2% indicate a stable risk profile, with a Sharpe ratio of -0.16 suggesting poor risk-adjusted returns.",
+        "financialHighlights": {
+          "marketCap": 375699996672,
+          "totalRevenue": 85259001856,
+          "netIncome": 16161999872,
+          "totalDebt": 36638998528,
+          "epsDiluted": 6.75
+        },
+        "filings": [
+          {
+            "form": "10-Q",
+            "filingDate": "2026-01-23",
+            "description": "FY2526 Q2 OND 10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000080424&type=10-Q"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-22",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000080424&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-22",
+            "description": "FY2526 Q2 OND 8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000080424&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "KO",
+        "rationale": "Driven by its iconic beverage brands, The Coca-Cola Company's cash flow compounding capabilities are supported by its stable consumer defensive business model, ensuring a consistent stream of income. With a risk score of 17 and volatility of 17.3%, the stock's risk profile is relatively low, and its Sharpe ratio of 0.84 indicates strong risk-adjusted returns.",
+        "financialHighlights": {
+          "marketCap": 343440457728,
+          "totalRevenue": 47941001216,
+          "netIncome": 13107000320,
+          "totalDebt": 45491998720,
+          "epsDiluted": 3.04
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-20",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=8-K"
+          },
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-20",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-02-10",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000021344&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "MO",
+        "rationale": "Altria Group's cash flow generation is driven by its stable consumer defensive business model, featuring a portfolio of well-known brands, making it a suitable fit for the cash flow compounders theme. The company's low risk score of 17 and elevated volatility of 30.3% suggest a unique risk profile, with a Sharpe ratio of 1.28 indicating strong risk-adjusted returns.",
+        "financialHighlights": {
+          "marketCap": 113427841024,
+          "totalRevenue": 20138999808,
+          "netIncome": 6946999808,
+          "totalDebt": 25709000704,
+          "epsDiluted": 4.12
+        },
+        "filings": [
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-29",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000764180&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-29",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000764180&type=8-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2025-12-11",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000764180&type=8-K"
+          }
+        ]
+      },
+      {
+        "symbol": "JNJ",
+        "rationale": "Johnson & Johnson's diversified healthcare business model generates substantial cash flows, which can be reinvested to drive long-term growth, aligning with the cash flow compounders theme. With a very low risk score of 5 and volatility of 13.4%, the stock's risk profile is extremely stable, and its recent revenue growth of 9.1% QoQ is a notable standout.",
+        "financialHighlights": {
+          "marketCap": 584376451072,
+          "totalRevenue": 94193000448,
+          "netIncome": 26804000768,
+          "totalDebt": 49332998144,
+          "epsDiluted": 11.03
+        },
+        "filings": [
+          {
+            "form": "10-K",
+            "filingDate": "2026-02-11",
+            "description": "10-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000200406&type=10-K"
+          },
+          {
+            "form": "8-K",
+            "filingDate": "2026-01-21",
+            "description": "8-K",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000200406&type=8-K"
+          },
+          {
+            "form": "10-Q",
+            "filingDate": "2025-10-22",
+            "description": "10-Q",
+            "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000200406&type=10-Q"
+          }
+        ]
+      }
+    ]
+  }
+}

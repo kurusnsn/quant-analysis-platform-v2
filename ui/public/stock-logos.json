@@ -1,0 +1,520 @@
+{
+  "AAPL": {
+    "name": "Apple Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YXBwbGUuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YXBwbGUuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "MSFT": {
+    "name": "Microsoft Corp",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bWljcm9zb2Z0LmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bWljcm9zb2Z0LmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "GOOGL": {
+    "name": "Alphabet Inc. Class A Common Stock",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YWJjLnh5eg/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YWJjLnh5eg/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "AMZN": {
+    "name": "Amazon.Com Inc",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YW1hem9uLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YW1hem9uLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ARM": {
+    "name": "Arm Holdings plc",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=arm.com&sz=128",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=arm.com&sz=128"
+  },
+  "TSM": {
+    "name": "Taiwan Semiconductor Manufacturing Company Limited",
+    "iconUrl": "https://www.google.com/s2/favicons?domain=tsmc.com&sz=128",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tsmc.com&sz=128"
+  },
+  "NVDA": {
+    "name": "Nvidia Corp",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bnZpZGlhLmNvbQ/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bnZpZGlhLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "META": {
+    "name": "Meta Platforms, Inc. Class A Common Stock",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YWJvdXQubWV0YS5jb20/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YWJvdXQubWV0YS5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "TSLA": {
+    "name": "Tesla, Inc. Common Stock",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dGVzbGEuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dGVzbGEuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "BRK.B": {
+    "name": "BERKSHIRE HATHAWAY Class B",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YmVya3NoaXJlaGF0aGF3YXkuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YmVya3NoaXJlaGF0aGF3YXkuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "UNH": {
+    "name": "UNITEDHEALTH GROUP INCORPORATED (Delaware)",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dW5pdGVkaGVhbHRoZ3JvdXAuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dW5pdGVkaGVhbHRoZ3JvdXAuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "XOM": {
+    "name": "Exxon Mobil Corporation",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/ZXh4b25tb2JpbC5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/ZXh4b25tb2JpbC5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "LLY": {
+    "name": "Eli Lilly & Co.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bGlsbHkuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bGlsbHkuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "JPM": {
+    "name": "JPMorgan Chase & Co.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/anBtb3JnYW5jaGFzZS5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/anBtb3JnYW5jaGFzZS5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "JNJ": {
+    "name": "Johnson & Johnson",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/am5qLmNvbQ/images/2024-09-01_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/am5qLmNvbQ/images/2024-09-01_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "PG": {
+    "name": "Procter & Gamble Company",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dXMucGcuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dXMucGcuY29t/images/2025-04-04_logo.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "AVGO": {
+    "name": "Broadcom Inc. Common Stock",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YnJvYWRjb20uY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YnJvYWRjb20uY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "MA": {
+    "name": "Mastercard Incorporated",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bWFzdGVyY2FyZC5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bWFzdGVyY2FyZC5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "HD": {
+    "name": "Home Depot, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/aG9tZWRlcG90LmNvbQ/images/2024-10-01_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/aG9tZWRlcG90LmNvbQ/images/2024-10-01_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "CVX": {
+    "name": "Chevron Corporation",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y2hldnJvbi5jb20/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y2hldnJvbi5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "MRK": {
+    "name": "Merck & Co., Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bWVyY2suY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bWVyY2suY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ABBV": {
+    "name": "ABBVIE INC.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YWJidmllLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YWJidmllLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "COST": {
+    "name": "Costco Wholesale Corp",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y29zdGNvLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y29zdGNvLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "PEP": {
+    "name": "PepsiCo, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/cGVwc2ljby5jb20/images/2025-03-20_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/cGVwc2ljby5jb20/images/2025-03-20_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "KO": {
+    "name": "Coca-Cola Company",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y29jYS1jb2xhY29tcGFueS5jb20/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y29jYS1jb2xhY29tcGFueS5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ADBE": {
+    "name": "Adobe Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YWRvYmUuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YWRvYmUuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "WMT": {
+    "name": "Walmart Inc. Common Stock",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/c3RvY2sud2FsbWFydC5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/c3RvY2sud2FsbWFydC5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "CRM": {
+    "name": "Salesforce, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/c2FsZXNmb3JjZS5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/c2FsZXNmb3JjZS5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "CSCO": {
+    "name": "Cisco Systems, Inc. Common Stock (DE)",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y2lzY28uY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y2lzY28uY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ACN": {
+    "name": "Accenture PLC",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YWNjZW50dXJlLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YWNjZW50dXJlLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "TMO": {
+    "name": "Thermo Fisher Scientific, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dGhlcm1vZmlzaGVyLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dGhlcm1vZmlzaGVyLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "LIN": {
+    "name": "Linde plc Ordinary Share",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bGluZGUuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bGluZGUuY29t/images/2025-04-04_logo.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "NFLX": {
+    "name": "NetFlix Inc",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bmV0ZmxpeC5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bmV0ZmxpeC5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "AMD": {
+    "name": "Advanced Micro Devices",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YW1kLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YW1kLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "DHR": {
+    "name": "Danaher Corporation",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/ZGFuYWhlci5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/ZGFuYWhlci5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "NKE": {
+    "name": "Nike, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bmlrZS5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bmlrZS5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "VZ": {
+    "name": "Verizon Communications",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dmVyaXpvbi5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dmVyaXpvbi5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "TXN": {
+    "name": "Texas Instruments Incorporated",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dGkuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dGkuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "DIS": {
+    "name": "The Walt Disney Company",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dGhld2FsdGRpc25leWNvbXBhbnkuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dGhld2FsdGRpc25leWNvbXBhbnkuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ORCL": {
+    "name": "Oracle Corp",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/b3JhY2xlLmNvbQ/images/2025-03-20_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/b3JhY2xlLmNvbQ/images/2025-03-20_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "CMCSA": {
+    "name": "Comcast Corp",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y29tY2FzdGNvcnBvcmF0aW9uLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y29tY2FzdGNvcnBvcmF0aW9uLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "PM": {
+    "name": "Philip Morris International Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/cG1pLmNvbQ/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/cG1pLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "QCOM": {
+    "name": "Qualcomm Inc",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/cXVhbGNvbW0uY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/cXVhbGNvbW0uY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "WFC": {
+    "name": "Wells Fargo & Co.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/d2VsbHNmYXJnby5jb20/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/d2VsbHNmYXJnby5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "INTC": {
+    "name": "Intel Corp",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/aW50ZWwuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/aW50ZWwuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "UPS": {
+    "name": "United Parcel Service, Inc. Class B",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dXBzLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dXBzLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "COP": {
+    "name": "ConocoPhillips",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y29ub2NvcGhpbGxpcHMuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y29ub2NvcGhpbGxpcHMuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "IBM": {
+    "name": "International Business Machines Corporation",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/aWJtLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/aWJtLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "NEE": {
+    "name": "NextEra Energy, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bmV4dGVyYWVuZXJneS5jb20/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bmV4dGVyYWVuZXJneS5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "BMY": {
+    "name": "Bristol-Myers Squibb Co.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Ym1zLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Ym1zLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "RTX": {
+    "name": "RTX Corporation",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/cnR4LmNvbQ/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/cnR4LmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "INTU": {
+    "name": "Intuit Inc",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/aW50dWl0LmNvbQ/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/aW50dWl0LmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "UNP": {
+    "name": "Union Pacific Corp.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dXAuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dXAuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "HON": {
+    "name": "Honeywell International, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/aG9uZXl3ZWxsLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/aG9uZXl3ZWxsLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "AMGN": {
+    "name": "Amgen Inc",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YW1nZW4uY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YW1nZW4uY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "BA": {
+    "name": "Boeing Company",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Ym9laW5nLmNvbQ/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Ym9laW5nLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "LOW": {
+    "name": "Lowe's Companies Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bG93ZXMuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bG93ZXMuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "SPGI": {
+    "name": "S&P Global Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/c3BnbG9iYWwuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/c3BnbG9iYWwuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "DE": {
+    "name": "Deere & Company",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/ZGVlcmUuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/ZGVlcmUuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "CAT": {
+    "name": "Caterpillar Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y2F0ZXJwaWxsYXIuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y2F0ZXJwaWxsYXIuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "GE": {
+    "name": "GE Aerospace",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Z2VhZXJvc3BhY2UuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Z2VhZXJvc3BhY2UuY29t/images/2025-04-04_logo.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "PLD": {
+    "name": "PROLOGIS, INC.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/cHJvbG9naXMuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/cHJvbG9naXMuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ELV": {
+    "name": "Elevance Health, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/ZWxldmFuY2VoZWFsdGguY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/ZWxldmFuY2VoZWFsdGguY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "SBUX": {
+    "name": "Starbucks Corp",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/c3RhcmJ1Y2tzLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/c3RhcmJ1Y2tzLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "GILD": {
+    "name": "Gilead Sciences Inc",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Z2lsZWFkLmNvbQ/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Z2lsZWFkLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "BLK": {
+    "name": "Blackrock, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YmxhY2tyb2NrLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YmxhY2tyb2NrLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "MS": {
+    "name": "Morgan Stanley",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bW9yZ2Fuc3RhbmxleS5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bW9yZ2Fuc3RhbmxleS5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "MDLZ": {
+    "name": "Mondelez International, Inc. Class A",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bW9uZGVsZXppbnRlcm5hdGlvbmFsLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bW9uZGVsZXppbnRlcm5hdGlvbmFsLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "AXP": {
+    "name": "American Express Company",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YW1lcmljYW5leHByZXNzLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YW1lcmljYW5leHByZXNzLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ADI": {
+    "name": "Analog Devices, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YW5hbG9nLmNvbQ/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YW5hbG9nLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "SYK": {
+    "name": "Stryker Corporation",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/c3RyeWtlci5jb20/images/2024-10-01_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/c3RyeWtlci5jb20/images/2024-10-01_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ISRG": {
+    "name": "Intuitive Surgical Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/aW50dWl0aXZlLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/aW50dWl0aXZlLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "TJX": {
+    "name": "TJX Companies, Inc. (The)",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dGp4LmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dGp4LmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "BKNG": {
+    "name": "Booking Holdings Inc. Common Stock",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Ym9va2luZ2hvbGRpbmdzLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Ym9va2luZ2hvbGRpbmdzLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ADP": {
+    "name": "Automatic Data Processing",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YWRwLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YWRwLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "VRTX": {
+    "name": "Vertex Pharmaceuticals Inc",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/dnJ0eC5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/dnJ0eC5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "LRCX": {
+    "name": "Lam Research Corp",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bGFtcmVzZWFyY2guY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bGFtcmVzZWFyY2guY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "PGR": {
+    "name": "Progressive Corporation",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/cHJvZ3Jlc3NpdmUuY29t/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/cHJvZ3Jlc3NpdmUuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "AMT": {
+    "name": "American Tower Corporation",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YW1lcmljYW50b3dlci5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YW1lcmljYW50b3dlci5jb20/images/2025-04-04_logo.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "REGN": {
+    "name": "Regeneron Pharmaceuticals Inc",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/cmVnZW5lcm9uLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/cmVnZW5lcm9uLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "C": {
+    "name": "Citigroup Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y2l0aWdyb3VwLmNvbQ/images/2025-04-04_icon.png?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y2l0aWdyb3VwLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ZTS": {
+    "name": "ZOETIS INC.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/em9ldGlzLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/em9ldGlzLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "CB": {
+    "name": "Chubb Limited",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y2h1YmIuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y2h1YmIuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "SO": {
+    "name": "The Southern Company",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/c291dGhlcm5jb21wYW55LmNvbQ/images/2024-10-01_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/c291dGhlcm5jb21wYW55LmNvbQ/images/2024-10-01_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "MO": {
+    "name": "Altria Group, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YWx0cmlhLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YWx0cmlhLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "SLB": {
+    "name": "SLB Limited",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/c2xiLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/c2xiLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "DUK": {
+    "name": "Duke Energy Corporation",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/ZHVrZS1lbmVyZ3kuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/ZHVrZS1lbmVyZ3kuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ETN": {
+    "name": "Eaton Corporation, plc Ordinary Shares",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/ZWF0b24uY29t/images/2024-10-01_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/ZWF0b24uY29t/images/2024-10-01_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "NOC": {
+    "name": "Northrop Grumman Corp.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/bm9ydGhyb3BncnVtbWFuLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/bm9ydGhyb3BncnVtbWFuLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "CME": {
+    "name": "CME Group Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Y21lZ3JvdXAuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Y21lZ3JvdXAuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "BSX": {
+    "name": "Boston Scientific Corp.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Ym9zdG9uc2NpZW50aWZpYy5jb20/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Ym9zdG9uc2NpZW50aWZpYy5jb20/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "EOG": {
+    "name": "EOG Resources, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/ZW9ncmVzb3VyY2VzLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/ZW9ncmVzb3VyY2VzLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "GS": {
+    "name": "Goldman Sachs Group Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/Z29sZG1hbnNhY2hzLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/Z29sZG1hbnNhY2hzLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "ITW": {
+    "name": "Illinois Tool Works Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/aXR3LmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/aXR3LmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "MMM": {
+    "name": "3M Company",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/M20uY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/M20uY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "PNC": {
+    "name": "PNC Financial Services Group",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/cG5jLmNvbQ/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/cG5jLmNvbQ/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "APD": {
+    "name": "Air Products & Chemicals, Inc.",
+    "iconUrl": "https://api.polygon.io/v1/reference/company-branding/YWlycHJvZHVjdHMuY29t/images/2025-04-04_icon.jpeg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n",
+    "logoUrl": "https://api.polygon.io/v1/reference/company-branding/YWlycHJvZHVjdHMuY29t/images/2025-04-04_logo.svg?apiKey=Tp5a7zkeGdgDCnmgIvuk1LljoJpY9p1n"
+  },
+  "XLK": {
+    "name": "Technology Select Sector SPDR"
+  },
+  "XLF": {
+    "name": "Financial Select Sector SPDR"
+  },
+  "XLV": {
+    "name": "Health Care Select Sector SPDR"
+  },
+  "XLE": {
+    "name": "Energy Select Sector SPDR"
+  },
+  "XLI": {
+    "name": "Industrial Select Sector SPDR"
+  },
+  "XLY": {
+    "name": "Consumer Discretionary Select Sector SPDR"
+  },
+  "XLP": {
+    "name": "Consumer Staples Select Sector SPDR"
+  },
+  "XLB": {
+    "name": "Materials Select Sector SPDR"
+  },
+  "XLU": {
+    "name": "Utilities Select Sector SPDR"
+  },
+  "XLRE": {
+    "name": "Real Estate Select Sector SPDR"
+  },
+  "XLC": {
+    "name": "Communication Services Select Sector SPDR"
+  }
+}
